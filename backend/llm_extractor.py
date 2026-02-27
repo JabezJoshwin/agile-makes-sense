@@ -1,7 +1,10 @@
-from openai import OpenAI
-from dotenv import load_dotenv
-import os
 import json
+import os
+from typing import Any, Dict, List
+
+from dotenv import load_dotenv
+from openai import OpenAI
+
 
 # -----------------------------
 # Load Environment Variables
@@ -16,17 +19,42 @@ if not API_KEY or not BASE_URL:
 
 client = OpenAI(
     api_key=API_KEY,
-    base_url=BASE_URL
+    base_url=BASE_URL,
 )
 
 MODEL_NAME = "deepseek-ai/DeepSeek-V3.2"
+
+
+def _safe_json_parse(content: str, empty_key: str) -> Dict[str, Any]:
+    """Attempt to parse JSON, falling back to an empty structure."""
+    content = content.strip()
+
+    if not content:
+        return {empty_key: []}
+
+    try:
+        return json.loads(content)
+    except Exception:
+        start = content.find("{")
+        end = content.rfind("}") + 1
+        if start != -1 and end != -1:
+            try:
+                return json.loads(content[start:end])
+            except Exception:
+                pass
+
+    print(f"{empty_key.capitalize()} JSON parsing failed.")
+    return {empty_key: []}
 
 
 # =====================================================
 # 1️⃣ TASK EXTRACTION FUNCTION
 # =====================================================
 
-def extract_tasks_with_llm(transcript: str):
+def extract_tasks_with_llm(transcript: str) -> Dict[str, List[Dict[str, Any]]]:
+    if not API_KEY or not BASE_URL:
+        print("LLM TASK CALL SKIPPED: Featherless API configuration missing.")
+        return {"tasks": []}
 
     system_prompt = """
     You are an Agile AI assistant.
@@ -57,32 +85,16 @@ def extract_tasks_with_llm(transcript: str):
             temperature=0,
             messages=[
                 {"role": "system", "content": system_prompt},
-                {"role": "user", "content": transcript}
-            ]
+                {"role": "user", "content": transcript},
+            ],
         )
 
-        content = response.choices[0].message.content
+        content = (response.choices[0].message.content or "").strip()
         print("\n===== LLM TASK RAW OUTPUT =====")
         print(content)
         print("================================\n")
 
-        # Try direct JSON parse
-        try:
-            parsed = json.loads(content)
-            return parsed
-        except Exception:
-            # Attempt to extract JSON block
-            start = content.find("{")
-            end = content.rfind("}") + 1
-
-            if start != -1 and end != -1:
-                try:
-                    return json.loads(content[start:end])
-                except:
-                    pass
-
-        print("Task JSON parsing failed.")
-        return {"tasks": []}
+        return _safe_json_parse(content, empty_key="tasks")
 
     except Exception as e:
         print("LLM TASK CALL FAILED:", str(e))
@@ -93,15 +105,18 @@ def extract_tasks_with_llm(transcript: str):
 # 2️⃣ EXPLANATION GENERATION FUNCTION
 # =====================================================
 
-def generate_explanations(tickets):
+def generate_explanations(tickets: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
+    if not API_KEY or not BASE_URL:
+        print("LLM EXPLANATION CALL SKIPPED: Featherless API configuration missing.")
+        return {"explanations": []}
 
     explanation_prompt = """
     You are an Agile AI assistant.
 
-    For each ticket below, provide a short explanation (maximum 50 words)
-    describing why it received its category and priority.
+    For each ticket below, provide a short explanation (maximum 100 words)
+    describing why it received its category and priority and tell how to approach it.
 
-    Keep explanations concise and professional.
+    Keep explanations concise and professional and make it sound like a human wrote it.
 
     Return ONLY valid JSON in this format:
 
@@ -121,30 +136,16 @@ def generate_explanations(tickets):
             temperature=0,
             messages=[
                 {"role": "system", "content": explanation_prompt},
-                {"role": "user", "content": json.dumps(tickets)}
-            ]
+                {"role": "user", "content": json.dumps(tickets)},
+            ],
         )
 
-        content = response.choices[0].message.content
+        content = (response.choices[0].message.content or "").strip()
         print("\n===== LLM EXPLANATION RAW OUTPUT =====")
         print(content)
         print("=======================================\n")
 
-        try:
-            parsed = json.loads(content)
-            return parsed
-        except Exception:
-            start = content.find("{")
-            end = content.rfind("}") + 1
-
-            if start != -1 and end != -1:
-                try:
-                    return json.loads(content[start:end])
-                except:
-                    pass
-
-        print("Explanation JSON parsing failed.")
-        return {"explanations": []}
+        return _safe_json_parse(content, empty_key="explanations")
 
     except Exception as e:
         print("LLM EXPLANATION CALL FAILED:", str(e))
