@@ -11087,6 +11087,7 @@ kexec-tools 2.0.31
 <p>I've got the basic setup out of the way, and am running a C# application. When I build and run the application, it chugs and is a CPU hog because it's being run through WSL.</p>
 <p>It runs way faster natively in Windows but I lose access to breakpoints.</p>
 <p>I've tried several ways to attach VS Code (WSL) to the windows process but haven't found a way to do it. I've been able to run the game and click &quot;Attach to Windows process..&quot; but I can't see the application in the list of processes.</p>",stackoverflow,2025-06-21 23:11:05,open
+<<<<<<< HEAD
 "Flutter could not connect to the Dart VM service on physical iOS device (SocketException: errno = 65) <p>I’m developing a Flutter application for both iOS and Android using VS Code on macOS (Sequoia 15.5). Everything was working perfectly until a week ago, when I suddenly started getting the following error only on my physical iOS device (iPhone 13):</p>
 <blockquote>
 <p>Error: Flutter could not connect to the Dart VM service.</p>
@@ -20297,3 +20298,5 @@ make: *** [seed] Error 1
 <p>Anyway it is not like VS detects it running so if I try to connect to the process again I get the same message.</p>
 <p><a href=""https://i.sstatic.net/6jAmzzBM.png"" rel=""nofollow noreferrer""><img src=""https://i.sstatic.net/6jAmzzBM.png"" alt=""visual studio output"" /></a></p>
 <p>Any idea on how to make this work? I am kind of blocked here.</p>",stackoverflow,2025-03-02 18:34:39,open
+=======
+>>>>>>> richan/main

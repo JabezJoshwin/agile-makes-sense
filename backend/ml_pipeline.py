@@ -1,11 +1,12 @@
-import pandas as pd
-import numpy as np
-import joblib
+import os
 
+import joblib
+import numpy as np
+import pandas as pd
 from sentence_transformers import SentenceTransformer
+from sklearn.metrics import classification_report, mean_absolute_error
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import classification_report, mean_absolute_error
 from xgboost import XGBClassifier, XGBRegressor
 
 
@@ -20,9 +21,9 @@ def main():
     print("Dataset size:", len(df))
 
     # -----------------------------
-    # Embedding Model
+    # Embedding Model (CPU-only for portability)
     # -----------------------------
-    embedder = SentenceTransformer("all-MiniLM-L6-v2")
+    embedder = SentenceTransformer("all-MiniLM-L6-v2", device="cpu")
 
     print("Generating embeddings...")
     X_embeddings = embedder.encode(df["text"].tolist(), show_progress_bar=True)
@@ -78,6 +79,7 @@ def main():
     # -----------------------------
     # Save Models
     # -----------------------------
+    os.makedirs(MODEL_SAVE_PATH, exist_ok=True)
     joblib.dump(embedder, MODEL_SAVE_PATH + "embedder.pkl")
     joblib.dump(clf, MODEL_SAVE_PATH + "classifier.pkl")
     joblib.dump(reg, MODEL_SAVE_PATH + "regressor.pkl")
