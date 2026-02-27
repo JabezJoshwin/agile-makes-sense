@@ -1,7 +1,7 @@
 import joblib
 from fastapi import FastAPI
 from pydantic import BaseModel
-from backend.llm_extractor import extract_tasks_with_llm, generate_explanations
+from llm_extractor import extract_tasks_with_llm, generate_explanations
 
 # -----------------------------
 # Load Models
