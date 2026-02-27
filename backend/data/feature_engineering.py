@@ -10,8 +10,8 @@ OUTPUT_PATH = "backend/data/processed/structured_dataset.csv"
 
 BUG_KEYWORDS = [
     "error", "exception", "fail", "crash", "not working",
-    "issue", "bug", "incorrect", "unable", "broken", "fails", "failure", "timeout",
-    "not responding", "incorrect behavior"
+    "issue", "bug", "incorrect", "unable", "broken", "fails",
+    "failure", "timeout", "not responding", "incorrect behavior"
 ]
 
 FEATURE_KEYWORDS = [
@@ -26,7 +26,14 @@ IMPROVEMENT_KEYWORDS = [
 
 URGENT_KEYWORDS = [
     "urgent", "asap", "critical",
-    "immediately", "production", "revenue"
+    "immediately", "production", "revenue",
+    "blocking", "high priority"
+]
+
+SEVERITY_KEYWORDS = [
+    "crash", "data loss", "security",
+    "breach", "production down", "outage",
+    "failure", "corruption", "downtime"
 ]
 
 
@@ -50,11 +57,16 @@ def detect_category(text):
     return "Task"
 
 
-# ---------- Scoring ---------- #
+# ---------- Feature Scores ---------- #
 
 def urgency_score(text):
     text_lower = str(text).lower()
     return sum(word in text_lower for word in URGENT_KEYWORDS)
+
+
+def severity_score(text):
+    text_lower = str(text).lower()
+    return sum(word in text_lower for word in SEVERITY_KEYWORDS)
 
 
 def complexity_score(text):
@@ -83,8 +95,30 @@ def assign_story_points(complexity):
     return mapping.get(complexity, 1)
 
 
-def compute_priority(urgency, complexity):
-    score = (urgency * 30) + (complexity * 10)
+# ---------- Intelligent Priority Logic ---------- #
+
+def compute_priority(category, urgency, severity, complexity):
+    score = 0
+
+    # Base weight by category
+    if category == "Bug":
+        score += 35
+    elif category == "Feature":
+        score += 20
+    elif category == "Improvement":
+        score += 15
+    else:  # Task
+        score += 10
+
+    # Severity impact (strong signal)
+    score += severity * 25
+
+    # Urgency impact
+    score += urgency * 20
+
+    # Complexity impact (moderate)
+    score += complexity * 5
+
     return min(score, 100)
 
 
@@ -103,7 +137,6 @@ def main():
             print("Reading:", file_path)
 
             try:
-                # Force single column read, tolerate bad commas
                 temp_df = pd.read_csv(
                     file_path,
                     engine="python",
@@ -125,7 +158,6 @@ def main():
 
     print("Total combined rows before dedup:", len(df))
 
-    # Remove duplicates
     df.drop_duplicates(subset=["text"], inplace=True)
 
     print("Total rows after dedup:", len(df))
@@ -133,11 +165,17 @@ def main():
     # Feature engineering
     df["category"] = df["text"].apply(detect_category)
     df["urgency_score"] = df["text"].apply(urgency_score)
+    df["severity_score"] = df["text"].apply(severity_score)
     df["complexity_score"] = df["text"].apply(complexity_score)
     df["story_points"] = df["complexity_score"].apply(assign_story_points)
 
     df["priority_score"] = df.apply(
-        lambda row: compute_priority(row["urgency_score"], row["complexity_score"]),
+        lambda row: compute_priority(
+            row["category"],
+            row["urgency_score"],
+            row["severity_score"],
+            row["complexity_score"]
+        ),
         axis=1
     )
 
