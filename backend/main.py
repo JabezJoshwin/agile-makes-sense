@@ -1,20 +1,82 @@
 import joblib
-from fastapi import FastAPI
+from pathlib import Path
+from typing import Tuple
+
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+<<<<<<< HEAD
 from llm_extractor import extract_tasks_with_llm, generate_explanations
+=======
+
+from backend.llm_extractor import extract_tasks_with_llm, generate_explanations
+>>>>>>> richan/main
 
 # -----------------------------
-# Load Models
+# Model Loading
 # -----------------------------
 
+<<<<<<< HEAD
 MODEL_PATH = "models/"
+=======
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_DIR = BASE_DIR / "models"
+>>>>>>> richan/main
 
-embedder = joblib.load(MODEL_PATH + "embedder.pkl")
-classifier = joblib.load(MODEL_PATH + "classifier.pkl")
-regressor = joblib.load(MODEL_PATH + "regressor.pkl")
-label_encoder = joblib.load(MODEL_PATH + "label_encoder.pkl")
+_embedder = None
+_classifier = None
+_regressor = None
+_label_encoder = None
 
-app = FastAPI()
+
+def get_models() -> Tuple:
+    """
+    Lazily construct the embedding model on CPU and
+    load the trained sklearn/XGBoost artifacts.
+    This avoids device-specific pickles (e.g. MPS)
+    causing runtime errors inside Docker.
+    """
+    global _embedder, _classifier, _regressor, _label_encoder
+
+    if all([_embedder, _classifier, _regressor, _label_encoder]):
+        return _embedder, _classifier, _regressor, _label_encoder
+
+    missing = []
+    paths = {
+        "embedder": MODEL_DIR / "embedder.pkl",
+        "classifier": MODEL_DIR / "classifier.pkl",
+        "regressor": MODEL_DIR / "regressor.pkl",
+        "label_encoder": MODEL_DIR / "label_encoder.pkl",
+    }
+
+    for _, path in paths.items():
+        if not path.exists():
+            missing.append(str(path))
+
+    if missing:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Model files missing",
+                "missing_files": missing,
+            },
+        )
+
+    # Load CPU-compatible models saved by ml_pipeline.py
+    _embedder = joblib.load(paths["embedder"])
+    _classifier = joblib.load(paths["classifier"])
+    _regressor = joblib.load(paths["regressor"])
+    _label_encoder = joblib.load(paths["label_encoder"])
+
+    return _embedder, _classifier, _regressor, _label_encoder
+
+
+app = FastAPI(title="Agile Makes Sense Backend")
+
+
+@app.get("/health")
+def health_check():
+    """Lightweight health check endpoint."""
+    return {"status": "ok"}
 
 
 # -----------------------------
@@ -33,6 +95,9 @@ class TextInput(BaseModel):
 def analyze(input_data: TextInput):
 
     transcript = input_data.text
+
+    # Ensure models are available before processing.
+    embedder, classifier, regressor, label_encoder = get_models()
 
     # -------- LLM Extraction --------
     llm_output = extract_tasks_with_llm(transcript)

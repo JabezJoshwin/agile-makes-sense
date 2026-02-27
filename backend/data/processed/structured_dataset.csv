@@ -11087,6 +11087,1323 @@ kexec-tools 2.0.31
 <p>I've got the basic setup out of the way, and am running a C# application. When I build and run the application, it chugs and is a CPU hog because it's being run through WSL.</p>
 <p>It runs way faster natively in Windows but I lose access to breakpoints.</p>
 <p>I've tried several ways to attach VS Code (WSL) to the windows process but haven't found a way to do it. I've been able to run the game and click &quot;Attach to Windows process..&quot; but I can't see the application in the list of processes.</p>",Task,0,0,4,8,30
+<<<<<<< HEAD
+=======
+Payment API returns 500 error during peak checkout traffic.,Bug,0,0,1,1,40
+Login fails when password contains special characters.,Bug,0,0,1,1,40
+Mobile app crashes when switching network from WiFi to LTE.,Bug,0,1,1,1,65
+Database connection timeout under high concurrency.,Bug,0,0,1,1,40
+Session expires unexpectedly after inactivity.,Task,0,0,1,1,15
+Add support for exporting reports as CSV.,Feature,0,0,1,1,25
+Implement role-based access control for admin panel.,Feature,0,0,1,1,25
+Allow users to reset password via SMS.,Feature,0,0,1,1,25
+Create endpoint for retrieving archived transactions.,Feature,0,0,1,1,25
+Optimize query performance for order history page.,Improvement,0,0,1,1,20
+Refactor authentication middleware for better maintainability.,Improvement,0,0,1,1,20
+Improve caching strategy for frequently accessed endpoints.,Improvement,0,0,1,1,20
+Enhance search performance for large datasets.,Improvement,0,0,1,1,20
+Reduce memory usage in background workers.,Task,0,0,1,1,15
+Investigate CPU spike on production server.,Task,1,0,1,1,35
+Migrate user database schema to version 2.,Task,0,0,1,1,15
+Upgrade payment SDK to latest stable release.,Task,0,0,1,1,15
+Update API documentation for new endpoints.,Task,0,0,1,1,15
+Add validation to prevent duplicate database entries.,Feature,0,0,1,1,25
+Fix alignment issue on profile settings page.,Bug,0,0,1,1,40
+Resolve race condition in notification service.,Task,0,0,1,1,15
+Correct timezone bug in reporting module.,Bug,0,0,1,1,40
+Fix broken image rendering in product grid.,Bug,0,0,1,1,40
+Implement bulk upload feature for inventory.,Feature,0,0,1,1,25
+Add audit logging for sensitive operations.,Feature,0,0,1,1,25
+Introduce pagination for transaction history.,Feature,0,0,1,1,25
+Enable email alerts for failed payments.,Feature,0,0,1,1,25
+Add analytics dashboard for revenue tracking.,Feature,1,0,1,1,45
+Improve error handling in checkout flow.,Improvement,0,0,1,1,20
+Fix webhook duplication when retries occur.,Task,0,0,1,1,15
+Remove unused CSS to reduce bundle size.,Task,0,0,1,1,15
+Production deployment fails due to missing environment variables.,Bug,1,0,1,1,60
+Implement two-factor authentication for admins.,Feature,0,0,1,1,25
+Reduce cold start times for serverless functions.,Task,0,0,1,1,15
+App crashes when rotating device orientation.,Bug,0,1,1,1,65
+Add loading indicator for async operations.,Feature,0,0,1,1,25
+Refactor monolith into microservices.,Improvement,0,0,1,1,20
+Schedule cleanup of expired logs weekly.,Task,0,0,1,1,15
+Map third-party gateway errors to user-friendly messages.,Bug,0,0,1,1,40
+Enable compression for static assets.,Feature,0,0,1,1,25
+Fix email template rendering in Outlook.,Task,0,0,1,1,15
+Add search functionality to admin dashboard.,Feature,0,0,1,1,25
+Upgrade PostgreSQL to improve performance.,Improvement,0,0,1,1,20
+Investigate memory leak in background job.,Task,0,0,1,1,15
+Allow users to customize dashboard widgets.,Feature,0,0,1,1,25
+Simplify deployment pipeline scripts.,Task,0,0,1,1,15
+Document incident response process.,Task,0,0,1,1,15
+Login page loads slowly due to large assets.,Task,0,0,1,1,15
+Implement feature flag system.,Feature,0,0,1,1,25
+Refactor codebase to async/await pattern.,Improvement,0,0,1,1,20
+Add monitoring alerts for high memory usage.,Feature,0,0,1,1,25
+Push notifications not delivered on iOS.,Task,0,0,1,1,15
+Create user guide for reporting module.,Feature,0,0,1,1,25
+Optimize search indexing strategy.,Improvement,0,0,1,1,20
+Fix CORS misconfiguration in API.,Task,0,0,1,1,15
+Add keyboard shortcuts for editor.,Feature,0,0,1,1,25
+Migrate CI/CD from Jenkins to GitHub Actions.,Task,0,0,1,1,15
+Renew SSL certificates before expiration.,Task,0,0,1,1,15
+Form resets on validation failure.,Bug,0,1,1,1,65
+Implement remember-me functionality.,Feature,0,0,1,1,25
+Reduce redundant database queries.,Task,0,0,1,1,15
+Add comments in configuration files.,Feature,0,0,1,1,25
+API gateway returns 503 during health check failure.,Bug,0,1,1,1,65
+Allow profile picture upload from mobile.,Feature,0,0,1,1,25
+Refactor permission system using roles.,Improvement,0,0,1,1,20
+Write migration guide from v1 to v2.,Task,0,0,1,1,15
+Console errors due to undefined variables.,Bug,0,0,1,1,40
+Add feedback button for user suggestions.,Feature,0,0,1,1,25
+Optimize Docker images with multi-stage builds.,Improvement,0,0,1,1,20
+Fix timezone inconsistencies in UI.,Task,0,0,1,1,15
+Implement Redis caching layer.,Feature,0,0,1,1,25
+Update privacy policy for compliance.,Task,0,0,1,1,15
+Orders processed twice on webhook retry.,Task,0,0,1,1,15
+Add social login support.,Feature,0,0,1,1,25
+Replace custom logging with structured logging.,Task,0,0,1,1,15
+Create runbook for maintenance recovery.,Feature,0,0,1,1,25
+Dropdown menu appears behind modal.,Task,0,0,1,1,15
+Enable auto-scaling during traffic spikes.,Feature,0,0,1,1,25
+Add confirmation dialog before record deletion.,Feature,0,0,1,1,25
+Refactor report generation asynchronously.,Improvement,0,0,1,1,20
+Document API versioning strategy.,Task,0,0,1,1,15
+Implement CSRF protection on forms.,Feature,0,0,1,1,25
+Lazy load images below fold.,Task,0,0,1,1,15
+Password reset fails with plus-sign emails.,Bug,0,0,1,1,40
+Allow admin user impersonation.,Feature,0,0,1,1,25
+Set up centralized log aggregation.,Task,0,0,1,1,15
+Add alt text to images for accessibility.,Feature,0,0,1,1,25
+Update vulnerable dependencies.,Task,0,0,1,1,15
+Improve offline support in mobile app.,Feature,0,0,1,1,25
+Add health check endpoint for load balancer.,Feature,0,0,1,1,25
+Refactor error handling middleware.,Improvement,0,0,1,1,20
+Write integration tests for payment flow.,Task,0,0,1,1,15
+Worker process not loading environment variables.,Task,0,0,1,1,15
+Enhance search with fuzzy matching.,Improvement,0,0,1,1,20
+Migrate database to cloud-managed service.,Task,0,0,1,1,15
+Add rate limiting to public APIs.,Feature,0,0,1,1,25
+Fix typo in welcome email.,Task,0,0,1,1,15
+Implement draft-saving functionality.,Feature,0,0,1,1,25
+Split bundle into vendor and app chunks.,Task,0,0,1,1,15
+Document API key rotation process.,Task,0,0,1,1,15
+Date picker shows incorrect year.,Bug,0,0,1,1,40
+Add Markdown support in comments.,Feature,0,0,1,1,25
+Refactor build system to ES modules.,Improvement,0,0,1,1,20
+Update contribution guidelines.,Task,0,0,1,1,15
+Authentication service unavailable due to Redis outage.,Task,0,1,1,1,40
+Allow data export as JSON.,Feature,0,0,1,1,25
+Pre-aggregate analytics data for performance.,Improvement,0,0,1,1,20
+Fix broken image paths after deployment.,Bug,0,0,1,1,40
+Add dark theme to editor.,Feature,0,0,1,1,25
+Set up automated backups to S3.,Task,0,0,1,1,15
+Notifications sent to incorrect users.,Bug,0,0,1,1,40
+Add file upload progress bar.,Feature,0,0,1,1,25
+Refactor SOAP integration to REST.,Improvement,0,0,1,1,20
+Write troubleshooting guide.,Task,0,0,1,1,15
+Enforce strong password policies.,Task,0,0,1,1,15
+Reduce main-thread blocking scripts.,Task,1,0,1,1,35
+Infinite scroll duplicates items.,Task,0,0,1,1,15
+Implement user tagging in comments.,Feature,0,0,1,1,25
+Cache dependencies in CI pipeline.,Task,0,0,1,1,15
+Update license to MIT.,Task,0,0,1,1,15
+Disk full due to excessive logging.,Task,0,0,1,1,15
+Add forgot password link.,Feature,0,0,1,1,25
+Refactor codebase to TypeScript.,Improvement,0,0,1,1,20
+Create UI component style guide.,Feature,0,0,1,1,25
+Mobile menu not closing on navigation.,Task,0,0,1,1,15
+Add sorting to table columns.,Feature,0,0,1,1,25
+Automate SSL renewal.,Task,0,0,1,1,15
+Fix navigation icon alignment.,Task,0,0,1,1,15
+Send confirmation email after signup.,Task,0,0,1,1,15
+Optimize slow database indexes.,Improvement,0,0,1,1,20
+Document environment setup process.,Task,0,0,1,1,15
+Payment gateway integration broken after API change.,Bug,0,0,1,1,40
+Allow email change in profile.,Feature,0,0,1,1,25
+Reconnect WebSocket automatically after drop.,Task,0,0,1,1,15
+Write end-to-end tests for checkout.,Task,0,0,1,1,15
+Progress bar not updating during upload.,Task,0,0,1,1,15
+Add like button to comments.,Feature,0,0,1,1,25
+Upgrade React to latest major version.,Task,0,0,1,1,15
+Update security policy documentation.,Task,0,1,1,1,40
+Reduce layout shift by reserving image space.,Task,0,0,1,1,15
+Session timeout too aggressive.,Bug,0,0,1,1,40
+Implement dashboard sharing feature.,Feature,0,0,1,1,25
+Use environment-specific configuration files.,Task,0,0,1,1,15
+Add changelog for releases.,Feature,0,0,1,1,25
+Migrate servers to ARM architecture.,Task,0,0,1,1,15
+PDF export cuts off content.,Task,0,0,1,1,15
+Add keyboard navigation to carousel.,Feature,0,0,1,1,25
+Optimize font loading strategy.,Improvement,0,0,1,1,20
+Document restore procedures.,Task,0,0,1,1,15
+Add audit trail for sensitive changes.,Feature,0,0,1,1,25
+Profile picture not updating.,Task,0,0,1,1,15
+Allow custom notification preferences.,Feature,0,0,1,1,25
+Modernize legacy PHP codebase.,Task,0,0,1,1,15
+Create demo video for feature launch.,Feature,0,0,1,1,25
+Database replication lag causes stale reads.,Task,0,0,1,1,15
+Add skip-to-content accessibility link.,Feature,0,0,1,1,25
+Upgrade Node.js runtime version.,Task,0,0,1,1,15
+Fix broken pagination in search results.,Bug,0,0,1,1,40
+Implement bookmarking functionality.,Feature,0,0,1,1,25
+Compress API JSON responses.,Task,0,0,1,1,15
+Write mobile app user manual.,Task,0,0,1,1,15
+Duplicate entries in calendar view.,Task,0,0,1,1,15
+Add reply option in notifications.,Feature,0,0,1,1,25
+Refactor CSS using variables.,Improvement,0,0,1,1,20
+Update terms of service.,Task,0,0,1,1,15
+Mirror staging environment with production.,Task,1,0,1,1,35
+Video playback stutters on low-end devices.,Task,0,0,1,1,15
+Allow account deletion option.,Feature,0,0,1,1,25
+Improve API error messages.,Improvement,0,0,1,1,20
+Document code review workflow.,Task,0,0,1,1,15
+Implement Content Security Policy headers.,Feature,0,1,1,1,50
+Charts not rendering in legacy browsers.,Task,0,0,1,1,15
+Add system-preference-based dark mode.,Feature,0,0,1,1,25
+Refactor authentication using OAuth2.,Improvement,0,0,1,1,20
+Create API quick start guide.,Feature,0,0,1,1,25
+Lazy load comment section.,Task,0,0,1,1,15
+Email notifications contain invalid links.,Task,0,0,1,1,15
+Allow customizable report frequency.,Feature,0,0,1,1,25
+Optimize Docker build context.,Improvement,0,0,1,1,20
+Add build status badges to README.,Feature,0,0,1,1,25
+Fix SQL injection vulnerability.,Task,0,0,1,1,15
+Add tooltips for complex form fields.,Feature,0,0,1,1,25
+Refactor queue system using Redis.,Improvement,0,0,1,1,20
+Write legacy data migration script.,Task,0,0,1,1,15
+Checkout crashes when applying invalid coupon.,Bug,0,1,1,1,65
+Add save-for-later feature.,Feature,0,0,1,1,25
+Improve admin panel responsiveness.,Improvement,0,0,1,1,20
+Document outage incident process.,Task,0,1,1,1,40
+Implement blue-green deployment strategy.,Feature,0,0,1,1,25
+Avatar not displaying on retina screens.,Task,0,0,1,1,15
+Allow merging duplicate accounts.,Feature,0,0,1,1,25
+Refactor notification templates.,Improvement,0,0,1,1,20
+Create installation troubleshooting guide.,Feature,0,0,1,1,25
+Add login attempt rate limiting.,Feature,0,0,1,1,25
+Search filters reset after refresh.,Task,0,0,1,1,15
+Add copy-to-clipboard button.,Feature,0,0,1,1,25
+Optimize Webpack configuration.,Improvement,0,0,1,1,20
+Update dependencies to stable versions.,Task,0,0,1,1,15
+API latency spikes due to inefficient joins.,Task,0,0,1,1,15
+Add persistent table filters.,Feature,0,0,1,1,25
+Refactor background jobs using cron.,Improvement,0,0,1,1,20
+Create developer onboarding checklist.,Feature,0,0,1,1,25
+App crashes when taking photo.,Bug,0,1,1,1,65
+Allow chat history export.,Feature,0,0,1,1,25
+Improve API response caching.,Improvement,0,0,1,1,20
+Document database schema structure.,Task,0,0,1,1,15
+Force HTTPS redirect for all traffic.,Task,0,0,1,1,15
+Validation errors not displayed correctly.,Bug,0,0,1,1,40
+Add emoji support in comments.,Feature,0,0,1,1,25
+Refactor code to follow standards.,Improvement,0,0,1,1,20
+Create commit message guidelines.,Feature,0,0,1,1,25
+Monitor disk usage thresholds.,Task,0,0,1,1,15
+Footer overlaps content on small screens.,Task,0,0,1,1,15
+Allow default dashboard selection.,Feature,0,0,1,1,25
+Optimize reporting SQL queries.,Improvement,0,0,1,1,20
+Update API docs with examples.,Task,0,0,1,1,15
+Authentication bypass vulnerability in reset flow.,Task,0,0,1,1,15
+Add send-feedback feature.,Feature,0,0,1,1,25
+Refactor payment processing using state machine.,Improvement,0,0,1,1,20
+Write release test plan.,Task,0,0,1,1,15
+Notification badge count incorrect.,Bug,0,0,1,1,40
+Add recently viewed items section.,Feature,0,0,1,1,25
+Improve date picker accessibility.,Improvement,0,0,1,1,20
+Document coding standards.,Task,0,0,1,1,15
+Set up VPN for internal services.,Task,0,0,1,1,15
+CSV import fails with commas in fields.,Bug,0,0,1,1,40
+Allow scheduled report emails.,Feature,0,0,1,1,25
+Refactor code using dependency injection.,Improvement,0,0,1,1,20
+Create user journey documentation.,Feature,0,0,1,1,25
+Reduce render-blocking resources.,Task,1,0,1,1,35
+Sidebar menu not collapsing.,Task,0,0,1,1,15
+Add print button to invoice page.,Feature,0,0,1,1,25
+Convert images to WebP format.,Task,0,0,1,1,15
+Update security header configuration.,Task,0,1,1,1,40
+Sanitize inputs to prevent XSS.,Task,0,0,1,1,15
+Large file uploads timeout.,Bug,0,0,1,1,40
+Allow dashboard widget reordering.,Feature,0,0,1,1,25
+Centralize logging system.,Task,0,0,1,1,15
+Write post-mortem report.,Task,0,0,1,1,15
+Automate dev environment provisioning.,Task,0,0,1,1,15
+Autocomplete shows outdated suggestions.,Task,0,0,1,1,15
+Add scheduled dark mode.,Feature,0,0,1,1,25
+Integrate Sentry for error tracking.,Bug,0,0,1,1,40
+Document feature flag usage.,Task,0,0,1,1,15
+Data loss due to missing backups.,Task,0,1,1,1,40
+Add skip tutorial option.,Feature,0,0,1,1,25
+Refactor code using repository pattern.,Improvement,0,0,1,1,20
+Create error message style guide.,Feature,0,0,1,1,25
+Preload critical fonts.,Task,1,0,1,1,35
+Modal close button not responsive.,Task,0,0,1,1,15
+Allow team member invitations.,Feature,0,0,1,1,25
+Optimize database for read-heavy load.,Improvement,0,0,1,1,20
+Update privacy policy with cookie info.,Task,0,0,1,1,15
+Implement global two-factor authentication.,Feature,0,0,1,1,25
+Infinite spinner on slow connections.,Task,0,0,1,1,15
+Add share button to posts.,Feature,0,0,1,1,25
+Refactor build scripts using workspaces.,Improvement,0,0,1,1,20
+Conduct security audit review.,Task,0,1,1,1,40
+Implement canary deployment.,Feature,0,0,1,1,25
+Calendar timezone issues after DST.,Bug,0,0,1,1,40
+Allow theme customization.,Feature,0,0,1,1,25
+Improve search indexing performance.,Improvement,0,0,1,1,20
+Document API error codes.,Bug,0,0,1,1,40
+Mitigate DDoS using rate limiting.,Task,0,0,1,1,15
+Add wishlist feature.,Feature,0,0,1,1,25
+Refactor authentication using JWT.,Improvement,0,0,1,1,20
+Create typography style guide.,Feature,0,0,1,1,25
+Enable brotli compression.,Feature,0,0,1,1,25
+Form submission fails silently.,Bug,0,0,1,1,40
+Add social media sharing feature.,Feature,0,0,1,1,25
+Optimize serverless concurrency.,Improvement,0,0,1,1,20
+Update code of conduct.,Task,0,0,1,1,15
+Fix open redirect vulnerability.,Task,0,0,1,1,15
+Infinite scroll loads duplicate pages.,Task,0,0,1,1,15
+Allow configurable result limits.,Feature,0,0,1,1,25
+Refactor code to modern hooks API.,Improvement,0,0,1,1,20
+Write UAT plan.,Task,0,0,1,1,15
+Automate server patching.,Task,0,0,1,1,15
+Tooltip misaligned on scroll.,Task,0,0,1,1,15
+Add read-later functionality.,Feature,0,0,1,1,25
+Improve static asset caching.,Improvement,0,0,1,1,20
+Document backup retention policy.,Task,0,0,1,1,15
+Fix login timeout issue.,Bug,0,0,1,1,40
+Allow API key regeneration.,Feature,0,0,1,1,25
+Refactor legacy integration service.,Improvement,0,0,1,1,20
+Create performance benchmarking report.,Feature,0,0,1,1,25
+Enable CDN for static assets.,Feature,0,0,1,1,25
+Improve logging format consistency.,Improvement,0,0,1,1,20
+Document system architecture overview.,Task,0,0,1,1,15
+Implement webhook signature verification.,Feature,0,0,1,1,25
+Fix dropdown interaction on mobile.,Task,0,0,1,1,15
+Add analytics tracking for features.,Feature,0,0,1,1,25
+Refactor configuration management.,Improvement,0,0,1,1,20
+Create release checklist.,Feature,0,0,1,1,25
+Optimize database vacuum operations.,Improvement,0,0,1,1,20
+Improve search relevance ranking.,Improvement,0,0,1,1,20
+Document deployment rollback steps.,Task,0,0,1,1,15
+Implement API version deprecation warning.,Feature,0,0,1,1,25
+Fix pagination count mismatch.,Task,0,0,1,1,15
+Add export-to-PDF option.,Feature,0,0,1,1,25
+Refactor legacy CSS grid.,Improvement,0,0,1,1,20
+Create QA testing checklist.,Feature,0,0,1,1,25
+Reduce initial page load time.,Task,0,0,1,1,15
+Improve authentication token refresh flow.,Improvement,0,0,1,1,20
+Document dependency update process.,Task,0,0,1,1,15
+Implement backup monitoring alerts.,Feature,0,0,1,1,25
+Fix profile update validation bug.,Bug,0,0,1,1,40
+Add account activity log view.,Feature,0,0,1,1,25
+Refactor service layer abstractions.,Improvement,0,0,1,1,20
+Create staging data refresh script.,Feature,0,0,1,1,25
+Optimize API caching headers.,Improvement,0,0,1,1,20
+Improve server startup time.,Improvement,0,0,1,1,20
+Document incident escalation matrix.,Task,0,0,1,1,15
+Implement API throttling dashboard.,Feature,0,0,1,1,25
+Fix search suggestion delay.,Task,0,0,1,1,15
+Add multi-language support.,Feature,0,0,1,1,25
+Refactor configuration loader.,Improvement,0,0,1,1,20
+Create operational runbook.,Feature,0,0,1,1,25
+Optimize network request batching.,Improvement,0,0,1,1,20
+Improve metrics collection accuracy.,Improvement,0,0,1,1,20
+Document disaster recovery procedure.,Task,0,0,1,1,15
+Implement structured audit logs.,Feature,0,0,1,1,25
+Fix file upload size limit issue.,Bug,0,0,1,1,40
+Add bulk action support in tables.,Feature,0,0,1,1,25
+Refactor service discovery logic.,Improvement,0,0,1,1,20
+Create feature rollout checklist.,Feature,0,0,1,1,25
+Optimize SQL indexing strategy.,Improvement,0,0,1,1,20
+Improve WebSocket reconnection handling.,Improvement,0,0,1,1,20
+Document API authentication guide.,Task,0,0,1,1,15
+Implement automatic failover strategy.,Feature,0,0,1,1,25
+Fix intermittent logout issue.,Bug,0,0,1,1,40
+Add activity feed feature.,Feature,0,0,1,1,25
+Refactor validation middleware.,Improvement,0,0,1,1,20
+Create onboarding checklist.,Feature,0,0,1,1,25
+Optimize resource prefetching.,Improvement,0,0,1,1,20
+Improve background job reliability.,Improvement,0,0,1,1,20
+Document API rate limit policy.,Task,0,0,1,1,15
+Implement centralized configuration service.,Feature,0,0,1,1,25
+Fix duplicate notification delivery.,Task,0,0,1,1,15
+Add dashboard export feature.,Feature,0,0,1,1,25
+Refactor state management logic.,Improvement,0,0,1,1,20
+Create internal documentation portal.,Feature,0,0,1,1,25
+Optimize container startup performance.,Improvement,0,0,1,1,20
+Improve service health monitoring.,Improvement,0,0,1,1,20
+Document cloud infrastructure architecture.,Task,0,0,1,1,15
+Implement circuit breaker pattern.,Feature,0,0,1,1,25
+Fix mobile scrolling performance issue.,Improvement,0,0,1,1,20
+Add custom report builder feature.,Feature,0,0,1,1,25
+Refactor data access layer.,Improvement,0,0,1,1,20
+Create product roadmap document.,Feature,0,0,1,1,25
+Optimize static content caching.,Improvement,0,0,1,1,20
+Improve error boundary handling.,Improvement,0,0,1,1,20
+Document third-party integration steps.,Task,0,0,1,1,15
+Implement automated database migrations.,Feature,0,0,1,1,25
+Fix broken breadcrumb navigation.,Bug,0,0,1,1,40
+Add API usage analytics.,Feature,0,0,1,1,25
+Refactor queue retry strategy.,Improvement,0,0,1,1,20
+Create sprint retrospective template.,Feature,0,0,1,1,25
+Optimize image CDN configuration.,Improvement,0,0,1,1,20
+Improve login flow security.,Improvement,0,1,1,1,45
+Document compliance requirements.,Task,0,0,1,1,15
+Implement backup validation process.,Feature,0,0,1,1,25
+Fix UI rendering glitch.,Task,0,0,1,1,15
+Add user preference management.,Feature,0,0,1,1,25
+Refactor authentication service.,Improvement,0,0,1,1,20
+Create operations dashboard.,Feature,0,0,1,1,25
+Optimize thread pool configuration.,Improvement,0,0,1,1,20
+Improve dependency vulnerability scanning.,Improvement,0,0,1,1,20
+Document change management process.,Task,0,0,1,1,15
+Implement service mesh.,Feature,0,0,1,1,25
+Fix intermittent webhook failures.,Bug,0,1,1,1,65
+Add notification center UI.,Feature,0,0,1,1,25
+Refactor metrics collection.,Improvement,0,0,1,1,20
+Create infrastructure cost report.,Feature,0,0,1,1,25
+Optimize API response compression.,Improvement,0,0,1,1,20
+Improve release automation workflow.,Improvement,0,0,1,1,20
+Document onboarding tutorial.,Task,0,0,1,1,15
+Implement database read replicas.,Feature,0,0,1,1,25
+Fix API pagination inconsistency.,Task,0,0,1,1,15
+Add collaborative editing feature.,Feature,0,0,1,1,25
+Refactor legacy scheduler.,Improvement,0,0,1,1,20
+Create testing automation strategy.,Feature,0,0,1,1,25
+Optimize bundle size further.,Improvement,0,0,1,1,20
+Improve search filter performance.,Improvement,0,0,1,1,20
+Document API change log.,Task,0,0,1,1,15
+Implement graceful shutdown logic.,Feature,0,0,1,1,25
+Fix memory growth over time.,Task,0,0,1,1,15
+Add audit trail export feature.,Feature,0,0,1,1,25
+Refactor session management.,Improvement,0,0,1,1,20
+Create architecture decision record.,Feature,0,0,1,1,25
+Optimize event processing pipeline.,Improvement,0,0,1,1,20
+Improve logging verbosity control.,Improvement,0,0,1,1,20
+Document security review checklist.,Task,0,1,1,1,40
+Implement automated rollback on failure.,Feature,0,1,1,1,50
+Fix incorrect error status codes.,Bug,0,0,1,1,40
+Add customizable notification templates.,Feature,0,0,1,1,25
+Refactor API gateway configuration.,Improvement,0,0,1,1,20
+Create deployment verification checklist.,Feature,0,0,1,1,25
+Optimize background sync process.,Improvement,0,0,1,1,20
+Improve cloud resource tagging.,Improvement,0,0,1,1,20
+Document internal API contracts.,Task,0,0,1,1,15
+Implement distributed tracing.,Feature,0,0,1,1,25
+Fix broken redirect after login.,Bug,0,0,1,1,40
+Add advanced filtering in reports.,Feature,0,0,1,1,25
+Refactor configuration validation.,Improvement,0,0,1,1,20
+Create engineering standards guide.,Feature,0,0,1,1,25
+Optimize job queue throughput.,Improvement,0,0,1,1,20
+Improve scalability testing process.,Improvement,0,0,1,1,20
+Document support escalation flow.,Feature,0,0,1,1,25
+Implement zero-downtime migration strategy.,Feature,0,1,1,1,50
+Fix inconsistent UI spacing.,Task,0,0,1,1,15
+Add reusable component library.,Feature,0,0,1,1,25
+Refactor legacy background workers.,Improvement,0,0,1,1,20
+Create infrastructure monitoring playbook.,Feature,0,0,1,1,25
+Optimize service autoscaling rules.,Improvement,0,0,1,1,20
+Improve audit log retention policy.,Improvement,0,0,1,1,20
+Document API onboarding steps.,Task,0,0,1,1,15
+Implement real-time analytics streaming.,Feature,0,0,1,1,25
+Fix inconsistent sorting behavior.,Task,0,0,1,1,15
+Add custom domain support.,Feature,0,0,1,1,25
+Refactor caching invalidation logic.,Improvement,0,0,1,1,20
+Create production readiness checklist.,Feature,1,0,1,1,45
+Optimize microservice communication latency.,Improvement,0,0,1,1,20
+Improve security incident reporting.,Improvement,0,1,1,1,45
+Document environment provisioning guide.,Task,0,0,1,1,15
+Implement global rate limiting.,Feature,0,0,1,1,25
+Fix stale cache invalidation bug.,Bug,0,0,1,1,40
+Add SLA monitoring dashboard.,Feature,0,0,1,1,25
+Refactor authentication token handling.,Improvement,0,0,1,1,20
+Create operational metrics guide.,Feature,0,0,1,1,25
+Optimize database connection pooling.,Improvement,0,0,1,1,20
+Improve CI/CD test parallelization.,Improvement,0,0,1,1,20
+Document feature deprecation policy.,Task,0,0,1,1,15
+Implement dynamic configuration reload.,Feature,0,0,1,1,25
+Fix email delivery delay issue.,Bug,0,0,1,1,40
+Add per-user API limits.,Feature,0,0,1,1,25
+Refactor dependency management.,Improvement,0,0,1,1,20
+Create QA automation roadmap.,Feature,0,0,1,1,25
+Optimize load balancer configuration.,Improvement,0,0,1,1,20
+Improve vulnerability patch workflow.,Improvement,0,0,1,1,20
+Document product feature matrix.,Task,0,0,1,1,15
+Implement data anonymization pipeline.,Feature,0,0,1,1,25
+Fix duplicate invoice generation.,Task,0,0,1,1,15
+Add granular permission controls.,Feature,0,0,1,1,25
+Refactor data synchronization logic.,Improvement,0,0,1,1,20
+Create cloud cost optimization plan.,Feature,0,0,1,1,25
+Optimize distributed cache performance.,Improvement,0,0,1,1,20
+Improve API monitoring coverage.,Improvement,0,0,1,1,20
+Document compliance audit checklist.,Task,0,0,1,1,15
+Implement webhook retry backoff.,Feature,0,0,1,1,25
+Fix intermittent database deadlock.,Task,0,0,1,1,15
+Add SSO provider integration.,Feature,0,0,1,1,25
+Refactor legacy API endpoints.,Improvement,0,0,1,1,20
+Create security hardening guide.,Feature,0,1,1,1,50
+Optimize application boot time.,Improvement,0,0,1,1,20
+Improve container health checks.,Improvement,0,0,1,1,20
+Document data retention policies.,Task,0,0,1,1,15
+Implement feature usage tracking.,Feature,0,0,1,1,25
+Fix inconsistent timezone handling.,Task,0,0,1,1,15
+Add internal tooling dashboard.,Feature,0,0,1,1,25
+Refactor job scheduling system.,Improvement,0,0,1,1,20
+Create service dependency map.,Feature,0,0,1,1,25
+Optimize Redis memory usage.,Improvement,0,0,1,1,20
+Improve performance testing coverage.,Improvement,0,0,1,1,20
+Document operational playbook.,Task,0,0,1,1,15
+Implement automated failover testing.,Feature,0,0,1,1,25
+Fix session persistence issue.,Bug,0,0,1,1,40
+Add customizable dashboard layouts.,Feature,0,0,1,1,25
+Refactor legacy event handlers.,Improvement,0,0,1,1,20
+Create internal API documentation.,Feature,0,0,1,1,25
+Optimize image CDN routing.,Improvement,0,0,1,1,20
+Improve authentication logging.,Improvement,0,0,1,1,20
+Document patch management process.,Task,0,0,1,1,15
+Implement SLA breach alerts.,Feature,0,1,1,1,50
+Fix race condition in checkout flow.,Task,0,0,1,1,15
+Add multi-region deployment support.,Feature,0,0,1,1,25
+Refactor service orchestration logic.,Improvement,0,0,1,1,20
+Create production incident checklist.,Feature,1,0,1,1,45
+Optimize front-end hydration performance.,Improvement,0,0,1,1,20
+Improve background task scheduling.,Improvement,0,0,1,1,20
+Document risk management plan.,Task,0,0,1,1,15
+Implement configuration versioning.,Feature,0,0,1,1,25
+Fix cache stampede issue.,Bug,0,0,1,1,40
+Add tenant-based data isolation.,Feature,0,0,1,1,25
+Refactor legacy logging system.,Improvement,0,0,1,1,20
+Create application architecture diagram.,Feature,0,0,1,1,25
+Optimize database query planner usage.,Improvement,0,0,1,1,20
+Improve API throttling visibility.,Improvement,0,0,1,1,20
+Document compliance data flow.,Task,0,0,1,1,15
+Implement proactive monitoring alerts.,Feature,0,0,1,1,25
+Fix retry logic duplication.,Task,0,0,1,1,15
+Add report scheduling dashboard.,Feature,0,0,1,1,25
+Refactor payment webhook handler.,Improvement,0,0,1,1,20
+Create business continuity plan.,Feature,0,0,1,1,25
+Optimize real-time notification delivery.,Improvement,0,0,1,1,20
+Improve cloud autoscaling thresholds.,Improvement,0,0,1,1,20
+Document engineering handbook.,Task,0,0,1,1,15
+Implement centralized secrets management.,Feature,0,0,1,1,25
+Fix data serialization bug.,Bug,0,0,1,1,40
+Add feature usage dashboard.,Feature,0,0,1,1,25
+Refactor internal SDK modules.,Improvement,0,0,1,1,20
+Create developer contribution workflow.,Feature,0,0,1,1,25
+Optimize CDN cache hit ratio.,Improvement,0,0,1,1,20
+Improve operational analytics reporting.,Improvement,0,0,1,1,20
+Document infrastructure topology.,Task,0,0,1,1,15
+Implement adaptive load balancing.,Feature,0,0,1,1,25
+Fix delayed job execution issue.,Bug,0,0,1,1,40
+Add custom notification channels.,Feature,0,0,1,1,25
+Refactor legacy authentication flow.,Improvement,0,0,1,1,20
+Create release communication template.,Feature,0,0,1,1,25
+Optimize memory allocation strategy.,Improvement,0,0,1,1,20
+Improve CI failure diagnostics.,Improvement,0,1,1,1,45
+Document upgrade procedures.,Task,0,0,1,1,15
+Implement cross-region replication.,Feature,0,0,1,1,25
+Fix API response format inconsistency.,Task,0,0,1,1,15
+Add customizable alert thresholds.,Feature,0,0,1,1,25
+Refactor distributed locking logic.,Improvement,0,0,1,1,20
+Create operational risk register.,Feature,0,0,1,1,25
+Optimize server resource allocation.,Improvement,0,0,1,1,20
+Improve incident response workflow.,Improvement,0,0,1,1,20
+Document architecture review process.,Task,0,0,1,1,15
+Implement traffic shadow testing.,Feature,0,0,1,1,25
+Fix transaction rollback inconsistency.,Task,0,0,1,1,15
+Add automated compliance reporting.,Feature,0,0,1,1,25
+Refactor legacy billing logic.,Improvement,0,0,1,1,20
+Create service reliability report.,Feature,0,0,1,1,25
+Optimize background queue performance.,Improvement,0,0,1,1,20
+Improve monitoring dashboard clarity.,Improvement,0,0,1,1,20
+Document configuration standards.,Task,0,0,1,1,15
+Implement policy-based access control.,Feature,0,0,1,1,25
+Fix broken password reset flow.,Bug,0,0,1,1,40
+Add detailed audit reporting.,Feature,0,0,1,1,25
+Refactor job retry mechanism.,Improvement,0,0,1,1,20
+Create developer best practices guide.,Feature,0,0,1,1,25
+Optimize multi-tenant performance.,Improvement,0,0,1,1,20
+Improve dependency update automation.,Improvement,0,0,1,1,20
+Document backup verification process.,Task,0,0,1,1,15
+Implement real-time fraud detection.,Feature,0,0,1,1,25
+Fix delayed notification processing.,Task,0,0,1,1,15
+Add admin audit dashboard.,Feature,0,0,1,1,25
+Refactor internal messaging system.,Improvement,0,0,1,1,20
+Create system health overview.,Feature,0,0,1,1,25
+Optimize failover switching time.,Improvement,0,0,1,1,20
+Improve encryption key rotation process.,Improvement,0,0,1,1,20
+Document operational KPIs.,Task,0,0,1,1,15
+Implement dynamic feature rollout.,Feature,0,0,1,1,25
+Fix UI state synchronization issue.,Bug,0,0,1,1,40
+Add scheduled maintenance notifications.,Feature,0,0,1,1,25
+Refactor service error handling.,Improvement,0,0,1,1,20
+Create high-level system overview.,Feature,0,0,1,1,25
+Optimize distributed tracing storage.,Improvement,0,0,1,1,20
+Improve API schema validation.,Improvement,0,0,1,1,20
+Document onboarding process flow.,Task,0,0,1,1,15
+Implement automated incident simulation.,Feature,0,0,1,1,25
+Fix webhook authentication error.,Bug,0,0,1,1,40
+Add configurable rate limits.,Feature,0,0,1,1,25
+Refactor legacy configuration files.,Improvement,0,0,1,1,20
+Create internal engineering wiki.,Feature,0,0,1,1,25
+Optimize job processing concurrency.,Improvement,0,0,1,1,20
+Improve SLA compliance tracking.,Improvement,0,0,1,1,20
+Document architectural patterns.,Task,0,0,1,1,15
+Implement circuit breaker monitoring.,Feature,0,0,1,1,25
+Fix order reconciliation mismatch.,Task,0,0,1,1,15
+Add centralized monitoring system.,Feature,0,0,1,1,25
+Refactor reporting service pipeline.,Improvement,0,0,1,1,20
+Create technical debt backlog.,Feature,0,0,1,1,25
+Optimize background sync retries.,Improvement,0,0,1,1,20
+Improve API performance benchmarks.,Improvement,0,0,1,1,20
+Document service dependency contracts.,Task,0,0,1,1,15
+Implement health check aggregation.,Feature,0,0,1,1,25
+Fix UI flicker during load.,Task,0,0,1,1,15
+Add per-feature analytics tracking.,Feature,0,0,1,1,25
+Refactor cloud infrastructure modules.,Improvement,0,0,1,1,20
+Create compliance certification report.,Feature,0,0,1,1,25
+Optimize session storage performance.,Improvement,0,0,1,1,20
+Improve security vulnerability response.,Improvement,0,1,1,1,45
+Document release governance process.,Task,0,0,1,1,15
+Implement adaptive retry logic.,Feature,0,0,1,1,25
+Fix double-submit form issue.,Bug,0,0,1,1,40
+Add advanced role management.,Feature,0,0,1,1,25
+Refactor payment reconciliation process.,Improvement,0,0,1,1,20
+Create operational excellence guide.,Feature,0,0,1,1,25
+Optimize API payload structure.,Improvement,0,0,1,1,20
+Improve user session tracking.,Improvement,0,0,1,1,20
+Document deployment strategy.,Task,0,0,1,1,15
+Implement policy enforcement engine.,Feature,0,0,1,1,25
+Fix inconsistent pagination offset.,Task,0,0,1,1,15
+Add audit log export capability.,Feature,0,0,1,1,25
+Refactor legacy search module.,Improvement,0,0,1,1,20
+Create roadmap planning document.,Feature,0,0,1,1,25
+Optimize background worker scaling.,Improvement,0,0,1,1,20
+Improve authentication failure logging.,Improvement,0,1,1,1,45
+Document production readiness review.,Task,1,0,1,1,35
+Implement distributed cache warming.,Feature,0,0,1,1,25
+Fix email queue backlog issue.,Bug,0,0,1,1,40
+Add admin performance metrics panel.,Feature,0,0,1,1,25
+Refactor internal API documentation tooling.,Improvement,0,0,1,1,20
+Create long-term scalability plan.,Feature,0,0,1,1,25
+Optimize system observability.,Improvement,0,0,1,1,20
+Improve compliance reporting automation.,Improvement,0,0,1,1,20
+Document risk mitigation strategies.,Task,0,0,1,1,15
+Implement service resilience testing.,Feature,0,0,1,1,25
+Fix transaction duplicate prevention logic.,Task,0,0,1,1,15
+Add customizable reporting templates.,Feature,0,0,1,1,25
+Refactor data validation framework.,Improvement,0,0,1,1,20
+Create internal monitoring standards.,Feature,0,0,1,1,25
+Optimize job scheduling efficiency.,Improvement,0,0,1,1,20
+Improve operational transparency dashboard.,Improvement,0,0,1,1,20
+Document service ownership matrix.,Task,0,0,1,1,15
+Implement automated policy audits.,Feature,0,0,1,1,25
+Fix slow API startup issue.,Bug,0,0,1,1,40
+Add configurable notification intervals.,Feature,0,0,1,1,25
+Refactor cloud resource tagging.,Improvement,0,0,1,1,20
+Create performance optimization checklist.,Feature,0,0,1,1,25
+Optimize distributed job coordination.,Improvement,0,0,1,1,20
+Improve reliability metrics tracking.,Improvement,0,0,1,1,20
+Document operational training guide.,Task,0,0,1,1,15
+Implement proactive anomaly detection.,Feature,0,0,1,1,25
+Fix file processing delay issue.,Bug,0,0,1,1,40
+Add configurable dashboard permissions.,Feature,0,0,1,1,25
+Refactor legacy configuration loader.,Improvement,0,0,1,1,20
+Create technical onboarding handbook.,Feature,0,0,1,1,25
+Optimize infrastructure provisioning speed.,Improvement,0,0,1,1,20
+Improve test coverage reporting.,Improvement,0,0,1,1,20
+Document service lifecycle policy.,Task,0,0,1,1,15
+Implement zero-trust network model.,Feature,0,0,1,1,25
+Fix intermittent API timeout issue.,Bug,0,0,1,1,40
+Add customizable email templates.,Feature,0,0,1,1,25
+Refactor legacy microservice endpoints.,Improvement,0,0,1,1,20
+Create engineering governance framework.,Feature,0,0,1,1,25
+Optimize autoscaling behavior.,Improvement,0,0,1,1,20
+Improve cloud security posture.,Improvement,0,1,1,1,45
+Document operational review cadence.,Task,0,0,1,1,15
+Implement continuous verification testing.,Feature,0,0,1,1,25
+Fix duplicate background job execution.,Task,0,0,1,1,15
+Add feature analytics segmentation.,Feature,0,0,1,1,25
+Refactor system configuration management.,Improvement,0,0,1,1,20
+Create enterprise compliance overview.,Feature,0,0,1,1,25
+Optimize container resource allocation.,Improvement,0,0,1,1,20
+Improve multi-service communication resilience.,Improvement,0,0,1,1,20
+Document operational readiness guide.,Task,0,0,1,1,15
+Implement high-availability architecture.,Feature,0,0,1,1,25
+Fix inconsistent response headers.,Task,0,0,1,1,15
+Add granular activity logging.,Feature,0,0,1,1,25
+Refactor event-driven architecture components.,Improvement,0,0,1,1,20
+Create enterprise deployment checklist.,Feature,0,0,1,1,25
+Optimize distributed caching strategy.,Improvement,0,0,1,1,20
+Improve service monitoring coverage.,Improvement,0,0,1,1,20
+Document business continuity strategy.,Task,0,0,1,1,15
+Implement adaptive load shedding.,Feature,0,0,1,1,25
+Fix transaction retry loop issue.,Bug,0,0,1,1,40
+Add advanced filtering for logs.,Feature,0,0,1,1,25
+Refactor legacy session handler.,Improvement,0,0,1,1,20
+Create engineering playbook.,Feature,0,0,1,1,25
+Optimize database sharding configuration.,Improvement,0,0,1,1,20
+Improve production observability pipeline.,Improvement,1,0,1,1,40
+Document risk assessment methodology.,Task,0,0,1,1,15
+Implement infrastructure cost tracking.,Feature,0,0,1,1,25
+Fix race condition in order updates.,Task,0,0,1,1,15
+Add real-time alerting dashboard.,Feature,0,0,1,1,25
+Refactor codebase modular structure.,Improvement,0,0,1,1,20
+Create internal API governance guide.,Feature,0,0,1,1,25
+Optimize cloud storage utilization.,Improvement,0,0,1,1,20
+Improve deployment validation automation.,Improvement,0,0,1,1,20
+Document operational audit procedures.,Task,0,0,1,1,15
+Implement proactive capacity planning.,Feature,0,0,1,1,25
+Fix data inconsistency during sync.,Task,0,0,1,1,15
+Add tenant-level monitoring dashboards.,Feature,0,0,1,1,25
+Refactor notification dispatch system.,Improvement,0,0,1,1,20
+Create scalable system blueprint.,Feature,0,0,1,1,25
+Optimize background processing throughput.,Improvement,0,0,1,1,20
+Improve SLA breach alerting.,Improvement,0,1,1,1,45
+Document infrastructure automation process.,Task,0,0,1,1,15
+Implement chaos testing framework.,Feature,0,0,1,1,25
+Fix session token refresh failure.,Bug,0,1,1,1,65
+Add compliance tracking dashboard.,Feature,0,0,1,1,25
+Refactor billing reconciliation module.,Improvement,0,0,1,1,20
+Create operational knowledge base.,Feature,0,0,1,1,25
+Optimize microservice request routing.,Improvement,0,0,1,1,20
+Improve API error reporting.,Improvement,0,0,1,1,20
+Document security architecture.,Task,0,1,1,1,40
+Implement automated regression testing.,Feature,0,0,1,1,25
+Fix payment status synchronization bug.,Bug,0,0,1,1,40
+Add system usage analytics.,Feature,0,0,1,1,25
+Refactor dependency injection setup.,Improvement,0,0,1,1,20
+Create service reliability roadmap.,Feature,0,0,1,1,25
+Optimize caching layer invalidation.,Improvement,0,0,1,1,20
+Improve production deployment metrics.,Improvement,1,0,1,1,40
+Document operational governance model.,Task,0,0,1,1,15
+Implement event streaming pipeline.,Feature,0,0,1,1,25
+Fix order processing deadlock.,Task,0,0,1,1,15
+Add centralized configuration dashboard.,Feature,0,0,1,1,25
+Refactor legacy job queue.,Improvement,0,0,1,1,20
+Create cloud migration strategy.,Feature,0,0,1,1,25
+Optimize service discovery mechanism.,Improvement,0,0,1,1,20
+Improve automated patch deployment.,Improvement,0,0,1,1,20
+Document system scalability plan.,Task,0,0,1,1,15
+Implement automated recovery drills.,Feature,0,0,1,1,25
+Fix API concurrency handling bug.,Bug,0,0,1,1,40
+Add dynamic configuration management.,Feature,0,0,1,1,25
+Refactor reporting aggregation logic.,Improvement,0,0,1,1,20
+Create engineering maturity assessment.,Feature,0,0,1,1,25
+Optimize cluster resource scheduling.,Improvement,0,0,1,1,20
+Improve reliability engineering processes.,Improvement,0,0,1,1,20
+Document compliance monitoring workflow.,Task,0,0,1,1,15
+Implement distributed state management.,Feature,0,0,1,1,25
+Fix authentication token expiry bug.,Bug,0,0,1,1,40
+Add role-based audit filtering.,Feature,0,0,1,1,25
+Refactor legacy cache implementation.,Feature,0,0,1,1,25
+Create application modernization roadmap.,Feature,0,0,1,1,25
+Optimize background worker efficiency.,Improvement,0,0,1,1,20
+Improve observability best practices.,Improvement,0,0,1,1,20
+Document release management standards.,Task,0,0,1,1,15
+Implement adaptive rate control.,Feature,0,0,1,1,25
+Fix stale session invalidation issue.,Bug,0,0,1,1,40
+Add usage trend analytics.,Feature,0,0,1,1,25
+Refactor service initialization logic.,Improvement,0,0,1,1,20
+Create platform reliability guide.,Feature,0,0,1,1,25
+Optimize infrastructure automation scripts.,Improvement,0,0,1,1,20
+Improve security alert triage process.,Improvement,0,1,1,1,45
+Document enterprise system overview.,Task,0,0,1,1,15
+Implement high-performance API gateway.,Feature,0,0,1,1,25
+Fix double notification issue.,Bug,0,0,1,1,40
+Add dynamic SLA monitoring.,Feature,0,0,1,1,25
+Refactor logging pipeline.,Improvement,0,0,1,1,20
+Create operational documentation index.,Feature,0,0,1,1,25
+Optimize query performance monitoring.,Improvement,0,0,1,1,20
+Improve resilience engineering documentation.,Improvement,0,0,1,1,20
+Document system integration patterns.,Task,0,0,1,1,15
+Implement auto-remediation workflows.,Feature,0,0,1,1,25
+Fix background job retry overflow.,Task,0,0,1,1,15
+Add centralized secrets dashboard.,Feature,0,0,1,1,25
+Refactor legacy deployment scripts.,Improvement,0,0,1,1,20
+Create infrastructure governance plan.,Feature,0,0,1,1,25
+Optimize service health metrics collection.,Improvement,0,0,1,1,20
+Improve cloud performance optimization.,Improvement,0,0,1,1,20
+Document security compliance checklist.,Task,0,1,1,1,40
+Implement proactive reliability testing.,Feature,0,0,1,1,25
+Fix payment callback validation error.,Bug,0,0,1,1,40
+Add audit compliance export.,Feature,0,0,1,1,25
+Refactor data processing service.,Improvement,0,0,1,1,20
+Create enterprise architecture roadmap.,Feature,0,0,1,1,25
+Optimize distributed tracing performance.,Improvement,0,0,1,1,20
+Improve incident analysis reporting.,Improvement,0,0,1,1,20
+Document API lifecycle management.,Task,0,0,1,1,15
+Implement automated failover orchestration.,Feature,0,0,1,1,25
+Fix inconsistent error handling logic.,Bug,0,0,1,1,40
+Add centralized monitoring configuration.,Feature,0,0,1,1,25
+Refactor legacy authentication module.,Improvement,0,0,1,1,20
+Create system design documentation.,Feature,0,0,1,1,25
+Optimize multi-region deployment strategy.,Improvement,0,0,1,1,20
+Improve engineering metrics visibility.,Improvement,0,0,1,1,20
+Document resilience strategy.,Task,0,0,1,1,15
+Implement predictive scaling model.,Feature,0,0,1,1,25
+Fix duplicate event processing issue.,Bug,0,0,1,1,40
+Add fine-grained permission settings.,Feature,0,0,1,1,25
+Refactor API routing logic.,Improvement,0,0,1,1,20
+Create internal compliance framework.,Feature,0,0,1,1,25
+Optimize backend resource utilization.,Improvement,0,0,1,1,20
+Improve SLA reporting automation.,Improvement,0,0,1,1,20
+Document operational escalation policy.,Task,0,0,1,1,15
+Implement infrastructure observability enhancements.,Feature,0,0,1,1,25
+Fix webhook signature verification bug.,Bug,0,0,1,1,40
+Add real-time operational dashboard.,Feature,0,0,1,1,25
+Refactor microservice communication layer.,Improvement,0,0,1,1,20
+Create enterprise risk analysis report.,Feature,0,0,1,1,25
+Optimize load balancing strategy.,Improvement,0,0,1,1,20
+Improve secure configuration management.,Improvement,0,0,1,1,20
+Document production system map.,Task,1,0,1,1,35
+Implement adaptive retry backoff mechanism.,Feature,0,0,1,1,25
+Fix authentication cache invalidation issue.,Bug,0,0,1,1,40
+Add per-tenant usage metrics.,Feature,0,0,1,1,25
+Refactor service dependency injection.,Improvement,0,0,1,1,20
+Create engineering performance dashboard.,Feature,0,0,1,1,25
+Optimize job queue balancing.,Improvement,0,0,1,1,20
+Improve monitoring threshold calibration.,Improvement,0,0,1,1,20
+Document compliance audit trail process.,Task,0,0,1,1,15
+Implement automated disaster recovery drills.,Feature,0,0,1,1,25
+Fix duplicate billing charge bug.,Bug,0,0,1,1,40
+Add advanced analytics reporting.,Feature,0,0,1,1,25
+Refactor background processing engine.,Improvement,0,0,1,1,20
+Create service ownership documentation.,Feature,0,0,1,1,25
+Optimize memory footprint in API.,Improvement,0,0,1,1,20
+Improve test automation reporting.,Improvement,0,0,1,1,20
+Document system governance framework.,Task,0,0,1,1,15
+Implement high-availability failover testing.,Feature,0,0,1,1,25
+Fix stale notification badge count.,Task,0,0,1,1,15
+Add system audit reporting dashboard.,Feature,0,0,1,1,25
+Refactor data ingestion pipeline.,Improvement,0,0,1,1,20
+Create reliability engineering handbook.,Feature,0,0,1,1,25
+Optimize infrastructure provisioning automation.,Improvement,0,0,1,1,20
+Improve API throttling analytics.,Improvement,0,0,1,1,20
+Document business impact analysis process.,Task,0,0,1,1,15
+Implement distributed cache replication.,Feature,0,0,1,1,25
+Fix intermittent load balancer timeout.,Bug,0,0,1,1,40
+Add configurable SLA dashboards.,Feature,0,0,1,1,25
+Refactor authentication token service.,Improvement,0,0,1,1,20
+Create cloud cost governance report.,Feature,0,0,1,1,25
+Optimize microservice startup performance.,Improvement,0,0,1,1,20
+Improve security compliance automation.,Improvement,0,1,1,1,45
+Document operational continuity strategy.,Task,0,0,1,1,15
+Implement adaptive traffic routing.,Feature,0,0,1,1,25
+Fix duplicate event subscription issue.,Bug,0,0,1,1,40
+Add role-based analytics visibility.,Feature,0,0,1,1,25
+Refactor legacy billing integration.,Improvement,0,0,1,1,20
+Create platform scalability documentation.,Feature,0,0,1,1,25
+Optimize distributed task scheduling.,Improvement,0,0,1,1,20
+Improve observability alert tuning.,Improvement,0,0,1,1,20
+Document engineering review workflow.,Task,0,0,1,1,15
+Implement automated chaos experiments.,Feature,0,0,1,1,25
+Fix race condition in session creation.,Task,0,0,1,1,15
+Add granular data export options.,Feature,0,0,1,1,25
+Refactor reporting scheduler.,Improvement,0,0,1,1,20
+Create enterprise monitoring guidelines.,Feature,0,0,1,1,25
+Optimize backend thread management.,Improvement,0,0,1,1,20
+Improve cloud compliance visibility.,Improvement,0,0,1,1,20
+Document system integration blueprint.,Task,0,0,1,1,15
+Implement proactive anomaly alerts.,Feature,0,0,1,1,25
+Fix duplicate webhook dispatch issue.,Bug,0,0,1,1,40
+Add feature adoption metrics dashboard.,Feature,0,0,1,1,25
+Refactor legacy event queue.,Improvement,0,0,1,1,20
+Create enterprise architecture documentation.,Feature,0,0,1,1,25
+Optimize container orchestration scaling.,Improvement,0,0,1,1,20
+Improve performance regression tracking.,Improvement,0,0,1,1,20
+Document operational incident history.,Task,0,0,1,1,15
+Implement adaptive auto-scaling algorithm.,Feature,0,0,1,1,25
+Fix inconsistent data synchronization issue.,Bug,0,0,1,1,40
+Add advanced audit filtering options.,Feature,0,0,1,1,25
+Refactor legacy transaction processor.,Improvement,0,0,1,1,20
+Create operational risk mitigation guide.,Feature,0,0,1,1,25
+Optimize distributed API performance.,Improvement,0,0,1,1,20
+Improve infrastructure automation documentation.,Improvement,0,0,1,1,20
+Document enterprise system controls.,Task,0,0,1,1,15
+Implement automated reliability scoring.,Feature,0,0,1,1,25
+Fix double invoice creation issue.,Bug,0,0,1,1,40
+Add system health trend analytics.,Feature,0,0,1,1,25
+Refactor configuration distribution service.,Improvement,0,0,1,1,20
+Create enterprise monitoring strategy.,Feature,0,0,1,1,25
+Optimize service mesh configuration.,Improvement,0,0,1,1,20
+Improve compliance automation reporting.,Improvement,0,0,1,1,20
+Document enterprise resilience framework.,Task,0,0,1,1,15
+Implement intelligent failover routing.,Feature,0,0,1,1,25
+Fix intermittent service restart issue.,Bug,0,0,1,1,40
+Add cross-region traffic monitoring.,Feature,0,0,1,1,25
+Refactor legacy authentication workflow.,Improvement,0,0,1,1,20
+Create platform operations handbook.,Feature,0,0,1,1,25
+Optimize event-driven architecture latency.,Improvement,0,0,1,1,20
+Improve cloud governance processes.,Improvement,0,0,1,1,20
+Document enterprise SLA standards.,Task,0,0,1,1,15
+Implement distributed transaction management.,Feature,0,0,1,1,25
+Fix stale cache refresh issue.,Bug,0,0,1,1,40
+Add operational metrics dashboard.,Feature,0,0,1,1,25
+Refactor legacy data export service.,Improvement,0,0,1,1,20
+Create enterprise deployment standards.,Feature,0,0,1,1,25
+Optimize load testing automation.,Improvement,0,0,1,1,20
+Improve performance monitoring framework.,Improvement,0,0,1,1,20
+Document enterprise disaster recovery.,Task,0,0,1,1,15
+Implement high-availability cluster management.,Feature,0,0,1,1,25
+Fix webhook retry duplication issue.,Bug,0,0,1,1,40
+Add per-service error analytics.,Feature,0,0,1,1,25
+Refactor microservice resilience logic.,Improvement,0,0,1,1,20
+Create enterprise observability plan.,Feature,0,0,1,1,25
+Optimize distributed storage configuration.,Improvement,0,0,1,1,20
+Improve production performance analysis.,Improvement,1,0,1,1,40
+Document enterprise compliance overview.,Task,0,0,1,1,15
+Implement proactive system monitoring.,Feature,0,0,1,1,25
+Fix authentication service timeout issue.,Bug,0,0,1,1,40
+Add centralized analytics portal.,Feature,0,0,1,1,25
+Refactor background task orchestration.,Improvement,0,0,1,1,20
+Create enterprise reliability standards.,Feature,0,0,1,1,25
+Optimize backend concurrency management.,Improvement,0,0,1,1,20
+Improve system-wide logging strategy.,Improvement,0,0,1,1,20
+Document engineering governance handbook.,Task,0,0,1,1,15
+Implement automated SLA breach detection.,Feature,0,1,1,1,50
+Fix transaction idempotency bug.,Bug,0,0,1,1,40
+Add operational compliance dashboard.,Feature,0,0,1,1,25
+Refactor legacy infrastructure scripts.,Improvement,0,0,1,1,20
+Create enterprise risk monitoring guide.,Feature,0,0,1,1,25
+Optimize distributed event streaming.,Improvement,0,0,1,1,20
+Improve cloud monitoring automation.,Improvement,0,0,1,1,20
+Document enterprise security controls.,Task,0,1,1,1,40
+Implement adaptive resource allocation.,Feature,0,0,1,1,25
+Fix duplicate notification delivery bug.,Bug,0,0,1,1,40
+Add advanced monitoring alerts.,Feature,0,0,1,1,25
+Refactor legacy integration pipeline.,Improvement,0,0,1,1,20
+Create enterprise system reliability guide.,Feature,0,0,1,1,25
+Optimize distributed job processing.,Improvement,0,0,1,1,20
+Improve security operations documentation.,Improvement,0,1,1,1,45
+Document enterprise architecture governance.,Task,0,0,1,1,15
+Implement predictive infrastructure scaling.,Feature,0,0,1,1,25
+Fix payment reconciliation mismatch issue.,Bug,0,0,1,1,40
+Add operational metrics export feature.,Feature,0,0,1,1,25
+Refactor service orchestration layer.,Improvement,0,0,1,1,20
+Create enterprise resilience playbook.,Feature,0,0,1,1,25
+Optimize multi-cluster deployment strategy.,Improvement,0,0,1,1,20
+Improve compliance incident reporting.,Improvement,0,0,1,1,20
+Document enterprise performance benchmarks.,Improvement,0,0,1,1,20
+Implement distributed load balancing enhancements.,Feature,0,0,1,1,25
+Fix intermittent cache invalidation issue.,Bug,0,0,1,1,40
+Add centralized operational analytics.,Feature,0,0,1,1,25
+Refactor legacy reporting engine.,Improvement,0,0,1,1,20
+Create enterprise observability framework.,Feature,0,0,1,1,25
+Optimize service discovery configuration.,Improvement,0,0,1,1,20
+Improve infrastructure reliability metrics.,Improvement,0,0,1,1,20
+Document enterprise automation guidelines.,Task,0,0,1,1,15
+Implement intelligent traffic shaping.,Feature,0,0,1,1,25
+Fix double form submission issue.,Bug,0,0,1,1,40
+Add advanced system health alerts.,Feature,0,0,1,1,25
+Refactor background service manager.,Improvement,0,0,1,1,20
+Create enterprise platform documentation.,Feature,0,0,1,1,25
+Optimize cloud cost monitoring.,Improvement,0,0,1,1,20
+Improve API performance monitoring.,Improvement,0,0,1,1,20
+Document enterprise scalability roadmap.,Task,0,0,1,1,15
+Implement distributed logging improvements.,Feature,0,0,1,1,25
+Fix duplicate data import bug.,Bug,0,0,1,1,40
+Add customizable alert policies.,Feature,0,0,1,1,25
+Refactor authentication middleware.,Improvement,0,0,1,1,20
+Create enterprise operational checklist.,Feature,0,0,1,1,25
+Optimize resource usage monitoring.,Improvement,0,0,1,1,20
+Improve infrastructure audit reporting.,Improvement,0,0,1,1,20
+Document enterprise engineering policies.,Task,0,0,1,1,15
+Implement adaptive performance tuning.,Feature,0,0,1,1,25
+Fix webhook processing delay issue.,Bug,0,0,1,1,40
+Add comprehensive audit trail system.,Feature,0,0,1,1,25
+Refactor legacy data transformation layer.,Improvement,0,0,1,1,20
+Create enterprise monitoring architecture.,Feature,0,0,1,1,25
+Optimize container deployment pipeline.,Improvement,0,0,1,1,20
+Improve SLA monitoring transparency.,Improvement,0,0,1,1,20
+Document enterprise service catalog.,Task,0,0,1,1,15
+Implement distributed caching improvements.,Feature,0,0,1,1,25
+Fix session persistence inconsistency.,Task,0,0,1,1,15
+Add configurable performance dashboards.,Feature,0,0,1,1,25
+Refactor event processing workflow.,Improvement,0,0,1,1,20
+Create enterprise deployment playbook.,Feature,0,0,1,1,25
+Optimize database replication tuning.,Improvement,0,0,1,1,20
+Improve security posture monitoring.,Improvement,0,1,1,1,45
+Document enterprise operational metrics.,Task,0,0,1,1,15
+Implement dynamic scaling thresholds.,Feature,0,0,1,1,25
+Fix duplicate API response bug.,Bug,0,0,1,1,40
+Add enterprise compliance analytics.,Feature,0,0,1,1,25
+Refactor logging aggregation service.,Improvement,0,0,1,1,20
+Create enterprise infrastructure blueprint.,Feature,0,0,1,1,25
+Optimize system resource balancing.,Improvement,0,0,1,1,20
+Improve monitoring data retention.,Improvement,0,0,1,1,20
+Document enterprise incident workflow.,Task,0,0,1,1,15
+Implement resilient service failover.,Feature,0,0,1,1,25
+Fix incorrect transaction status bug.,Bug,0,0,1,1,40
+Add advanced user analytics.,Feature,0,0,1,1,25
+Refactor legacy session store.,Improvement,0,0,1,1,20
+Create enterprise reliability assessment.,Feature,0,0,1,1,25
+Optimize workload distribution strategy.,Improvement,0,0,1,1,20
+Improve production alert accuracy.,Improvement,1,0,1,1,40
+Document enterprise DevOps standards.,Task,0,0,1,1,15
+Implement automated recovery validation.,Feature,0,0,1,1,25
+Fix webhook event ordering issue.,Bug,0,0,1,1,40
+Add enterprise operational reporting.,Feature,0,0,1,1,25
+Refactor configuration management service.,Improvement,0,0,1,1,20
+Create enterprise governance model.,Feature,0,0,1,1,25
+Improve reliability monitoring dashboard.,Improvement,0,0,1,1,20
+Document enterprise security compliance.,Task,0,1,1,1,40
+Implement adaptive error recovery.,Feature,0,0,1,1,25
+Fix duplicate background task execution.,Task,0,0,1,1,15
+Add enterprise metrics visualization.,Feature,0,0,1,1,25
+User authentication fails intermittently with 'invalid token' error even for valid sessions.,Bug,0,0,1,1,40
+Add a new endpoint to retrieve user activity logs for compliance purposes.,Feature,0,0,1,1,25
+Refactor the notification service to use a message queue instead of direct API calls.,Improvement,0,0,1,1,20
+Update the README with setup instructions for the new development environment.,Task,0,0,1,1,15
+Mobile app freezes when scrolling through large lists on Android devices.,Task,0,0,1,1,15
+Implement a dark mode toggle in the settings panel.,Feature,0,0,1,1,25
+Optimize image loading on the homepage to improve Lighthouse scores.,Improvement,0,0,1,1,20
+Database connection pool exhaustion under high load,Task,0,0,1,1,15
+Create a script to back up production database daily.,Feature,1,0,1,1,45
+Frontend build fails due to outdated webpack plugin.,Bug,0,0,1,1,40
+Allow users to filter search results by date range.,Feature,0,0,1,1,25
+Replace deprecated library 'moment.js' with 'date-fns' to reduce bundle size.,Task,0,0,1,1,15
+Add unit tests for the payment processing module.,Feature,0,0,1,1,25
+API rate limiting is too aggressive,Task,0,0,1,1,15
+Design a new onboarding flow for first-time users.,Task,0,0,1,1,15
+Migrate legacy server from CentOS 7 to Ubuntu 22.04.,Task,0,0,1,1,15
+Fix broken links in the documentation sidebar.,Bug,0,0,1,1,40
+Critical security vulnerability: upgrade lodash to latest version.,Task,1,1,1,1,60
+Support exporting reports in Excel format.,Feature,0,0,1,1,25
+Improve error handling in the checkout process to prevent silent failures.,Improvement,0,1,1,1,45
+Slack integration duplicates messages when webhook retries.,Task,0,0,1,1,15
+Add validation to prevent duplicate entries in the database.,Feature,0,0,1,1,25
+Remove unused CSS classes to reduce stylesheet size.,Task,0,0,1,1,15
+Production deployment failed because of missing environment variables.,Bug,1,0,1,1,60
+Implement two-factor authentication for admin accounts.,Feature,0,0,1,1,25
+Reduce cold start times for lambda functions by optimizing dependencies.,Task,0,0,1,1,15
+Update API documentation to reflect changes in request/response formats.,Task,0,0,1,1,15
+App crashes when switching from landscape to portrait mode on tablets.,Bug,0,1,1,1,65
+Add a loading spinner to async buttons to improve UX.,Feature,0,0,1,1,25
+Refactor the monolith into microservices for better scalability.,Improvement,0,0,1,1,20
+Schedule a weekly cleanup of old log files to free up disk space.,Task,0,0,1,1,15
+Third-party payment gateway returns cryptic errors; map them to user-friendly messages.,Bug,0,0,1,1,40
+Enable compression for static assets to speed up page loads.,Feature,0,0,1,1,25
+Fix alignment issues in the email template for Outlook clients.,Bug,0,0,1,1,40
+Add search functionality to the admin panel.,Feature,0,0,1,1,25
+Upgrade PostgreSQL to version 15 for new features and performance.,Improvement,0,0,1,1,20
+Investigate memory leak in the background sync process.,Task,0,0,1,1,15
+Simplify the deployment pipeline by merging staging and production scripts.,Task,1,0,1,1,35
+Document the incident response playbook for database outages.,Task,0,1,1,1,40
+Login page takes too long to load due to large background image.,Task,0,0,1,1,15
+Implement a feature flag system to toggle new features remotely.,Feature,0,0,1,1,25
+Refactor the codebase to use async/await instead of callbacks.,Improvement,0,0,1,1,20
+Add monitoring alerts for high CPU usage on critical servers.,Feature,1,0,1,1,45
+Mobile app push notifications not working on iOS devices.,Bug,0,0,1,1,40
+Create a user guide for the new reporting tool.,Feature,0,0,1,1,25
+Optimize the search algorithm to return results faster.,Improvement,0,0,1,1,20
+Fix CORS issues preventing API calls from the frontend.,Bug,0,0,1,1,40
+Add keyboard shortcuts for common actions in the editor.,Feature,0,0,1,1,25
+Migrate from Jenkins to GitHub Actions for CI/CD.,Task,0,0,1,1,15
+Update SSL certificates before expiration next week.,Task,0,0,1,1,15
+Bug: Form resets when validation fails,Bug,0,0,1,1,40
+Implement a 'remember me' checkbox on login.,Feature,0,0,1,1,25
+Reduce the number of database queries on the product listing page.,Task,0,0,1,1,15
+Add comments to the configuration files for clarity.,Feature,0,0,1,1,25
+Service outage: API gateway returns 503 due to misconfigured health checks.,Task,0,1,1,1,40
+Allow users to upload profile pictures from mobile.,Feature,0,0,1,1,25
+Refactor the permission system to use roles instead of hardcoded checks.,Improvement,0,0,1,1,20
+Write a migration guide for users upgrading from v1 to v2.,Task,0,0,1,1,15
+Frontend console errors due to undefined variables in legacy code.,Bug,0,0,1,1,40
+Add a feedback button to collect user suggestions.,Feature,0,0,1,1,25
+Optimize Docker image sizes by using multi-stage builds.,Improvement,0,0,1,1,20
+Fix timezone inconsistencies in date displays across the app.,Task,0,0,1,1,15
+Implement a caching layer for frequently accessed data.,Feature,0,0,1,1,25
+Update the privacy policy to comply with new regulations.,Task,0,0,1,1,15
+Critical bug: Orders are processed twice when payment webhook retries.,Bug,1,0,1,1,60
+Add social login options (Google,Feature,0,0,1,1,25
+Replace custom logging with structured logging using Winston.,Task,0,0,1,1,15
+Create a runbook for restarting services after maintenance.,Feature,0,0,1,1,25
+UI glitch: dropdown menu appears behind modal overlay.,Task,0,0,1,1,15
+Enable auto-scaling for the backend services during traffic spikes.,Feature,0,0,1,1,25
+Add a confirmation dialog before deleting important records.,Feature,0,0,1,1,25
+Refactor the report generation to run asynchronously.,Improvement,0,0,1,1,20
+Document the API versioning strategy.,Task,0,0,1,1,15
+Security: Implement CSRF protection on all forms.,Feature,0,1,1,1,50
+Performance: Lazy load images below the fold.,Improvement,0,0,1,1,20
+Bug: Cannot reset password if email contains a plus sign.,Bug,0,0,1,1,40
+Feature: Allow admins to impersonate users for troubleshooting.,Feature,0,0,1,1,25
+DevOps: Set up log aggregation with ELK stack.,Task,0,0,1,1,15
+Fix accessibility issues: add alt text to all images.,Feature,0,0,1,1,25
+Update third-party libraries to patch known vulnerabilities.,Task,0,0,1,1,15
+Mobile app: improve offline support by caching recent data.,Feature,0,0,1,1,25
+Add a health check endpoint for the load balancer.,Feature,0,0,1,1,25
+Refactor the error handling middleware to use a consistent format.,Improvement,0,0,1,1,20
+Write integration tests for the payment webhook.,Task,0,0,1,1,15
+Production bug: Environment variables not loaded in the worker process.,Bug,1,0,1,1,60
+Enhance the search with fuzzy matching.,Improvement,0,0,1,1,20
+Migrate from MySQL to Aurora for better scalability.,Task,0,0,1,1,15
+Add rate limiting to public endpoints to prevent abuse.,Feature,0,0,1,1,25
+Fix typo in the welcome email subject line.,Task,0,0,1,1,15
+Implement a feature to save draft posts.,Feature,0,0,1,1,25
+Optimize the bundle by splitting vendor and app code.,Improvement,0,0,1,1,20
+Document the process for rotating API keys.,Task,0,0,1,1,15
+Bug: Date picker shows wrong year after browser locale change.,Bug,0,0,1,1,40
+Add support for Markdown in comments.,Feature,0,0,1,1,25
+Refactor the build process to use ES modules.,Improvement,0,0,1,1,20
+Update the contribution guidelines.,Task,0,0,1,1,15
+Critical: Authentication service down due to Redis connection failure.,Bug,1,1,1,1,85
+Allow users to export their data as JSON.,Feature,0,0,1,1,25
+Improve the performance of the analytics dashboard by pre-aggregating data.,Improvement,0,0,1,1,20
+Fix broken image paths after static asset restructuring.,Bug,0,0,1,1,40
+Add a dark theme to the code editor.,Feature,0,0,1,1,25
+Set up automatic database backups to S3.,Task,0,0,1,1,15
+Bug: Notifications are sent to wrong users due to caching issue.,Bug,0,0,1,1,40
+Feature: Add a progress bar for file uploads.,Feature,0,0,1,1,25
+Refactor the legacy SOAP integration to REST.,Improvement,0,0,1,1,20
+Write a troubleshooting guide for common issues.,Bug,0,0,1,1,40
+Security: Enforce strong password policies.,Task,0,1,1,1,40
+Performance: Reduce main thread work by deferring non-critical scripts.,Improvement,1,0,1,1,40
+Bug: Infinite scroll duplicates items when network is slow.,Bug,0,0,1,1,40
+Implement a feature to tag users in comments.,Feature,0,0,1,1,25
+Optimize the CI pipeline by caching dependencies.,Improvement,0,0,1,1,20
+Update the license file to MIT.,Task,0,0,1,1,15
+Production incident: Disk full due to excessive logging.,Task,1,0,1,1,35
+Add a 'forgot password' link to the login page.,Feature,0,0,1,1,25
+Refactor the code to use TypeScript for better type safety.,Improvement,0,0,1,1,20
+Create a style guide for the UI components.,Feature,0,0,1,1,25
+Bug: Mobile menu not closing after navigation.,Bug,0,0,1,1,40
+Feature: Allow sorting of table columns.,Feature,0,0,1,1,25
+DevOps: Automate SSL renewal with certbot.,Task,0,0,1,1,15
+Fix the alignment of icons in the navigation bar.,Task,0,0,1,1,15
+Add a confirmation email after signup.,Feature,0,0,1,1,25
+Optimize database indexes for slow queries.,Improvement,0,0,1,1,20
+Document the environment setup for new developers.,Task,0,0,1,1,15
+Critical: Payment gateway integration broken after API update.,Bug,1,0,1,1,60
+Allow users to change their email address.,Feature,0,0,1,1,25
+Refactor the WebSocket connection handling to reconnect automatically.,Improvement,0,0,1,1,20
+Write end-to-end tests for the checkout flow.,Task,0,0,1,1,15
+Bug: Progress bar not updating during file upload.,Bug,0,0,1,1,40
+Feature: Add a 'like' button to comments.,Feature,0,0,1,1,25
+Upgrade to React 18 and adopt concurrent features.,Task,0,0,1,1,15
+Update the security policy with new guidelines.,Task,0,1,1,1,40
+Performance: Reduce CLS by reserving space for images.,Improvement,0,0,1,1,20
+Bug: Session timeout too short,Bug,0,0,1,1,40
+Implement a feature to share dashboards with teammates.,Feature,0,0,1,1,25
+Refactor the code to use environment-specific configuration files.,Improvement,0,0,1,1,20
+Add a changelog for releases.,Feature,0,0,1,1,25
+DevOps: Migrate servers to ARM architecture for cost savings.,Task,0,0,1,1,15
+Bug: PDF export cuts off text on the right side.,Bug,0,0,1,1,40
+Feature: Add keyboard navigation to the carousel.,Feature,0,0,1,1,25
+Optimize the font loading to avoid FOIT.,Improvement,0,0,1,1,20
+Document the backup and restore procedures.,Task,0,0,1,1,15
+Security: Add audit logging for sensitive operations.,Feature,0,1,1,1,50
+Bug: Profile picture not updating after change.,Bug,0,0,1,1,40
+Allow users to set notification preferences.,Feature,0,0,1,1,25
+Refactor the legacy codebase to use modern PHP features.,Improvement,0,0,1,1,20
+Create a demo video for the new feature.,Feature,0,0,1,1,25
+Production: Database replication lag causing stale reads.,Task,1,0,1,1,35
+Add a 'skip to content' link for accessibility.,Feature,0,0,1,1,25
+Upgrade Node.js to version 20 for security patches.,Task,0,1,1,1,40
+Fix the broken pagination on the search results page.,Bug,0,0,1,1,40
+Implement a feature to bookmark items.,Feature,0,0,1,1,25
+Optimize the API response times by compressing JSON.,Improvement,0,0,1,1,20
+Write a user manual for the mobile app.,Task,0,0,1,1,15
+Bug: Duplicate entries in the calendar view.,Bug,0,0,1,1,40
+Feature: Add a 'reply' option to notifications.,Feature,0,0,1,1,25
+Refactor the CSS to use CSS variables for theming.,Improvement,0,0,1,1,20
+Update the terms of service.,Task,0,0,1,1,15
+DevOps: Set up a staging environment that mirrors production.,Task,1,0,1,1,35
+Bug: Video playback stutters on low-end devices.,Bug,0,0,1,1,40
+Allow users to delete their account.,Feature,0,0,1,1,25
+Improve the error messages for API consumers.,Improvement,0,0,1,1,20
+Document the code review process.,Task,0,0,1,1,15
+Security: Implement Content Security Policy headers.,Feature,0,1,1,1,50
+Bug: Charts not rendering in Internet Explorer.,Bug,0,0,1,1,40
+Feature: Add a dark mode toggle that respects system preferences.,Feature,0,0,1,1,25
+Refactor the authentication to use OAuth2.,Improvement,0,0,1,1,20
+Create a quick start guide for the API.,Feature,0,0,1,1,25
+Performance: Lazy load the comments section.,Improvement,0,0,1,1,20
+Bug: Email notifications contain broken links.,Bug,0,0,1,1,40
+Allow users to customize the frequency of reports.,Feature,0,0,1,1,25
+Optimize the Docker build context to speed up builds.,Improvement,0,0,1,1,20
+Update the README with badges for build status.,Task,0,0,1,1,15
+Critical: SQL injection vulnerability in search endpoint.,Task,1,0,1,1,35
+Add a tooltip to explain complex fields.,Feature,0,0,1,1,25
+Refactor the queue system to use Redis instead of database.,Improvement,0,0,1,1,20
+Write a migration script for legacy data.,Task,0,0,1,1,15
+Bug: Checkout page crashes when applying invalid coupon.,Bug,0,1,1,1,65
+Feature: Add a 'save for later' option in cart.,Feature,0,0,1,1,25
+Improve the responsiveness of the admin panel.,Improvement,0,0,1,1,20
+Document the incident response process.,Task,0,0,1,1,15
+DevOps: Implement blue-green deployments to reduce downtime.,Feature,0,1,1,1,50
+Bug: Avatar not displayed correctly on retina screens.,Bug,0,0,1,1,40
+Allow users to merge duplicate accounts.,Feature,0,0,1,1,25
+Refactor the notification templates to use a single source.,Improvement,0,0,1,1,20
+Create a troubleshooting guide for installation issues.,Feature,0,0,1,1,25
+Security: Add rate limiting to login attempts.,Feature,0,1,1,1,50
+Bug: Search filters reset after page refresh.,Bug,0,0,1,1,40
+Feature: Add a 'copy to clipboard' button for code snippets.,Feature,0,0,1,1,25
+Optimize the Webpack configuration for faster builds.,Improvement,0,0,1,1,20
+Update the dependencies to latest stable versions.,Task,0,0,1,1,15
+Production: API latency spikes due to inefficient joins.,Task,1,0,1,1,35
+Add a 'remember this filter' option for tables.,Feature,0,0,1,1,25
+Refactor the background jobs to use cron instead of custom scheduler.,Improvement,0,0,1,1,20
+Write a developer onboarding checklist.,Task,0,0,1,1,15
+Bug: Mobile app crashes when taking photo on certain devices.,Bug,0,1,1,1,65
+Allow users to export chat history.,Feature,0,0,1,1,25
+Improve the caching strategy for API responses.,Improvement,0,0,1,1,20
+Document the database schema.,Task,0,0,1,1,15
+Security: Enable HTTPS redirect for all traffic.,Feature,0,1,1,1,50
+Bug: Form validation errors not showing for some fields.,Bug,0,0,1,1,40
+Feature: Add emoji support in comments.,Feature,0,0,1,1,25
+Refactor the code to follow PSR standards.,Improvement,0,0,1,1,20
+Create a style guide for commit messages.,Feature,0,0,1,1,25
+DevOps: Monitor disk usage and alert at 80%.,Task,0,0,1,1,15
+Bug: Footer overlaps content on small screens.,Bug,0,0,1,1,40
+Allow users to set a default dashboard.,Feature,0,0,1,1,25
+Optimize the SQL queries for the reporting module.,Improvement,0,0,1,1,20
+Update the API documentation with examples.,Task,0,0,1,1,15
+Critical: Authentication bypass in password reset flow.,Task,1,0,1,1,35
+Add a 'send feedback' option in the app.,Feature,0,0,1,1,25
+Refactor the payment processing to use a state machine.,Improvement,0,0,1,1,20
+Write a test plan for the next release.,Task,0,0,1,1,15
+Bug: Notification badge count not updating.,Bug,0,0,1,1,40
+Feature: Add a 'recently viewed' section.,Feature,0,0,1,1,25
+Improve the accessibility of the date picker.,Improvement,0,0,1,1,20
+Document the coding standards.,Task,0,0,1,1,15
+DevOps: Set up a VPN for internal services.,Task,0,0,1,1,15
+Bug: Import from CSV fails if file contains commas.,Bug,0,0,1,1,40
+Allow users to schedule reports to be emailed.,Feature,0,0,1,1,25
+Refactor the legacy code to use dependency injection.,Improvement,0,0,1,1,20
+Create a user journey map for the main feature.,Feature,0,0,1,1,25
+Performance: Reduce render-blocking resources.,Improvement,1,0,1,1,40
+Bug: Sidebar menu not collapsing on mobile.,Bug,0,0,1,1,40
+Feature: Add a 'print' button to the invoice page.,Feature,0,0,1,1,25
+Optimize the image assets for webP format.,Improvement,0,0,1,1,20
+Update the security headers configuration.,Task,0,1,1,1,40
+Security: Sanitize user input to prevent XSS.,Task,0,1,1,1,40
+Bug: Timeout when uploading large files.,Bug,0,0,1,1,40
+Allow users to reorder dashboard widgets.,Feature,0,0,1,1,25
+Refactor the logging to use a centralized system.,Improvement,0,0,1,1,20
+Write a post-mortem for the recent outage.,Task,0,1,1,1,40
+DevOps: Automate the creation of development environments.,Task,0,0,1,1,15
+Bug: Search bar autocomplete shows outdated suggestions.,Bug,0,0,1,1,40
+Feature: Add a 'dark mode' schedule option.,Feature,0,0,1,1,25
+Improve the error tracking with Sentry integration.,Improvement,0,0,1,1,20
+Document the feature flagging process.,Task,0,0,1,1,15
+Critical: Data loss in production due to missing backup.,Task,2,1,1,1,80
+Add a 'skip tutorial' button for returning users.,Feature,0,0,1,1,25
+Refactor the code to use the repository pattern.,Improvement,0,0,1,1,20
+Create a style guide for error messages.,Feature,0,0,1,1,25
+Performance: Preload critical fonts.,Improvement,1,0,1,1,40
+Bug: Modal close button not working on touch devices.,Bug,0,0,1,1,40
+Allow users to invite team members via email.,Feature,0,0,1,1,25
+Optimize the database for read-heavy workloads.,Improvement,0,0,1,1,20
+Update the privacy policy to include cookie usage.,Task,0,0,1,1,15
+Security: Implement two-factor authentication for all users.,Feature,0,1,1,1,50
+Bug: Infinite loading spinner on slow connections.,Bug,0,0,1,1,40
+Feature: Add a 'share' button to blog posts.,Feature,0,0,1,1,25
+Refactor the build scripts to use npm workspaces.,Improvement,0,0,1,1,20
+Write a security audit report.,Task,0,1,1,1,40
+DevOps: Set up a canary deployment process.,Task,0,0,1,1,15
+Bug: Calendar events show wrong timezone after DST change.,Bug,0,0,1,1,40
+Allow users to customize the color theme.,Feature,0,0,1,1,25
+Improve the performance of the search by adding an index.,Feature,0,0,1,1,25
+Document the API error codes.,Bug,0,0,1,1,40
+Critical: Ransomware attack – isolate affected systems and restore from backup.,Task,1,0,1,1,35
+Add a 'clear cache' button in admin settings.,Feature,0,0,1,1,25
+Refactor the code to use async iterators.,Improvement,0,0,1,1,20
+Create a onboarding video for new users.,Feature,0,0,1,1,25
+Performance: Implement virtual scrolling for long lists.,Feature,0,0,1,1,25
+Bug: Dropdown options not selectable on iOS.,Bug,0,0,1,1,40
+Feature: Add a 'reactions' feature to messages.,Feature,0,0,1,1,25
+Optimize the Docker images for faster pull times.,Improvement,0,0,1,1,20
+Update the contributing guide with new branch naming.,Task,0,0,1,1,15
+Security: Patch OpenSSL vulnerability immediately.,Task,1,1,1,1,60
+Bug: PDF generation fails for large reports.,Bug,0,0,1,1,40
+Allow users to set custom notification sounds.,Feature,0,0,1,1,25
+Refactor the event handling to use a pub/sub system.,Improvement,0,0,1,1,20
+Write a disaster recovery plan.,Task,0,0,1,1,15
+DevOps: Migrate to Kubernetes for container orchestration.,Task,0,0,1,1,15
+Bug: Charts not displaying data for some date ranges.,Bug,0,0,1,1,40
+Feature: Add a 'compare' feature for products.,Feature,0,0,1,1,25
+Improve the loading state of the dashboard.,Improvement,0,0,1,1,20
+Document the deployment process.,Task,0,0,1,1,15
+Critical: Zero-day exploit – apply emergency patch.,Task,1,0,1,1,35
+Add a 'contact support' form in the app.,Feature,0,0,1,1,25
+Refactor the legacy CSS to use Tailwind.,Improvement,0,0,1,1,20
+Create a user feedback survey.,Feature,0,0,1,1,25
+Performance: Reduce TTI by code splitting.,Improvement,0,0,1,1,20
+Bug: Form submission double-posts on slow networks.,Bug,0,0,1,1,40
+Allow users to export analytics data as CSV.,Feature,0,0,1,1,25
+Optimize the CI/CD pipeline for parallel execution.,Improvement,0,0,1,1,20
+Update the README with new project structure.,Task,0,0,1,1,15
+Security: Rotate all API keys after breach.,Task,0,2,1,1,65
+Bug: Notifications not marked as read after click.,Bug,0,0,1,1,40
+Feature: Add a 'night mode' that adjusts brightness.,Feature,0,0,1,1,25
+Refactor the code to use GraphQL for flexible queries.,Improvement,0,0,1,1,20
+Write a performance testing plan.,Improvement,0,0,1,1,20
+DevOps: Set up a self-healing infrastructure.,Task,0,0,1,1,15
+Bug: Video player controls unresponsive on iPad.,Bug,0,0,1,1,40
+Allow users to undo actions with a toast notification.,Feature,0,0,1,1,25
+Improve the accuracy of the search relevance.,Improvement,0,0,1,1,20
+Document the system architecture.,Task,0,0,1,1,15
+Critical: Database corruption – restore from snapshot.,Task,1,1,1,1,60
+Add a 'report abuse' button to user content.,Feature,0,0,1,1,25
+Refactor the error boundaries in React to catch more errors.,Improvement,0,0,1,1,20
+Create a style guide for API responses.,Feature,0,0,1,1,25
+Performance: Lazy load the admin panel modules.,Improvement,0,0,1,1,20
+Bug: Password strength meter not working on signup.,Bug,0,0,1,1,40
+Feature: Add a 'saved searches' functionality.,Feature,0,0,1,1,25
+Optimize the asset pipeline to use CDN.,Improvement,0,0,1,1,20
+Update the license to GPLv3.,Task,0,0,1,1,15
+Security: Add input validation on all endpoints.,Feature,0,1,1,1,50
+Bug: Comment pagination broken after editing.,Bug,0,0,1,1,40
+Allow users to change the language preference.,Feature,0,0,1,1,25
+Refactor the background jobs to use BullMQ.,Improvement,0,0,1,1,20
+Write a test strategy document.,Task,0,0,1,1,15
+DevOps: Implement infrastructure as code with Terraform.,Feature,0,0,1,1,25
+Bug: Charts overlap on small screens.,Bug,0,0,1,1,40
+Feature: Add a 'dark mode' that syncs across devices.,Feature,0,0,1,1,25
+Improve the logging for better debugging.,Improvement,0,0,1,1,20
+Document the cache invalidation strategy.,Task,0,0,1,1,15
+Critical: SSO integration broken after IdP update.,Bug,1,0,1,1,60
+Add a 'tutorial' mode for first-time users.,Feature,0,0,1,1,25
+Refactor the code to use the latest ECMAScript features.,Improvement,0,0,1,1,20
+Create a user persona document for design.,Feature,0,0,1,1,25
+Performance: Optimize the WebSocket connection for low bandwidth.,Improvement,0,0,1,1,20
+Bug: Dropdown closes immediately on click.,Bug,1,0,1,1,60
+Feature: Add a 'copy link' button to share content.,Feature,0,0,1,1,25
+Optimize the database vacuum process.,Improvement,0,0,1,1,20
+Update the dependency policy to require security audits.,Task,0,1,1,1,40
+Security: Implement HMAC verification for webhooks.,Feature,0,1,1,1,50
+Bug: Avatar not updating after change.,Bug,0,0,1,1,40
+Allow users to export their reading history.,Feature,0,0,1,1,25
+Refactor the code to use the composition API in Vue.,Improvement,0,0,1,1,20
+Write a release checklist.,Task,0,0,1,1,15
+DevOps: Set up a metrics dashboard with Grafana.,Task,0,0,1,1,15
+Bug: Search filters not applied correctly.,Bug,0,0,1,1,40
+Feature: Add a 'mark as read' option for notifications.,Feature,0,0,1,1,25
+Improve the mobile responsiveness of the tables.,Improvement,0,0,1,1,20
+Document the environment variable naming conventions.,Task,0,0,1,1,15
+Critical: DDoS attack – mitigate with rate limiting and CDN.,Task,1,0,1,1,35
+Add a 'wishlist' feature for products.,Feature,0,0,1,1,25
+Refactor the legacy authentication to use JWT.,Improvement,0,0,1,1,20
+Create a style guide for typography.,Feature,0,0,1,1,25
+Performance: Enable brotli compression.,Feature,0,0,1,1,25
+Bug: Form validation passes but submission fails.,Bug,0,0,1,1,40
+Feature: Add a 'share to social media' button.,Feature,0,0,1,1,25
+Optimize the serverless functions for concurrency.,Improvement,0,0,1,1,20
+Update the code of conduct.,Task,0,0,1,1,15
+Security: Fix open redirect vulnerability.,Task,0,1,1,1,40
+Bug: Infinite scroll loads same page multiple times.,Bug,0,0,1,1,40
+Allow users to customize the number of results per page.,Feature,0,0,1,1,25
+Refactor the code to use the new hooks API in React.,Improvement,0,0,1,1,20
+Write a user acceptance test plan.,Task,0,0,1,1,15
+DevOps: Automate server patching with Ansible.,Task,0,0,1,1,15
+Bug: Tooltip position off on scroll.,Bug,0,0,1,1,40
+Feature: Add a 'read later' list.,Feature,0,0,1,1,25
+Improve the caching of static assets.,Improvement,0,0,1,1,20
+Document the backup retention policy.,Task,0,0,1,1,15
+Critical: Payment gateway downtime – switch to fallback.,Task,1,1,1,1,60
+>>>>>>> richan/main
 "Flutter could not connect to the Dart VM service on physical iOS device (SocketException: errno = 65) <p>I’m developing a Flutter application for both iOS and Android using VS Code on macOS (Sequoia 15.5). Everything was working perfectly until a week ago, when I suddenly started getting the following error only on my physical iOS device (iPhone 13):</p>
 <blockquote>
 <p>Error: Flutter could not connect to the Dart VM service.</p>
@@ -20297,6 +21614,7 @@ make: *** [seed] Error 1
 <p>Anyway it is not like VS detects it running so if I try to connect to the process again I get the same message.</p>
 <p><a href=""https://i.sstatic.net/6jAmzzBM.png"" rel=""nofollow noreferrer""><img src=""https://i.sstatic.net/6jAmzzBM.png"" alt=""visual studio output"" /></a></p>
 <p>Any idea on how to make this work? I am kind of blocked here.</p>",Bug,0,0,4,8,55
+<<<<<<< HEAD
 Payment API returns 500 error during peak checkout traffic.,Bug,0,0,1,1,40
 Login fails when password contains special characters.,Bug,0,0,1,1,40
 Mobile app crashes when switching network from WiFi to LTE.,Bug,0,1,1,1,65
@@ -21611,3 +22929,5 @@ Feature: Add a 'read later' list.,Feature,0,0,1,1,25
 Improve the caching of static assets.,Improvement,0,0,1,1,20
 Document the backup retention policy.,Task,0,0,1,1,15
 Critical: Payment gateway downtime – switch to fallback.,Task,1,1,1,1,60
+=======
+>>>>>>> richan/main
