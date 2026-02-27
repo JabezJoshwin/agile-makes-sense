@@ -7,7 +7,7 @@ from backend.llm_extractor import extract_tasks_with_llm, generate_explanations
 # Load Models
 # -----------------------------
 
-MODEL_PATH = "backend/models/"
+MODEL_PATH = "models/"
 
 embedder = joblib.load(MODEL_PATH + "embedder.pkl")
 classifier = joblib.load(MODEL_PATH + "classifier.pkl")
