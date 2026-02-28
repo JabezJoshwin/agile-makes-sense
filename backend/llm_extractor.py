@@ -1,152 +1,145 @@
+"""
+LLM integration for task extraction + explanation (single call, concurrency safe).
+Compatible with Featherless OpenAI-style API.
+"""
+
 import json
 import os
+import re
+import time
 from typing import Any, Dict, List
 
 from dotenv import load_dotenv
 from openai import OpenAI
 
+# -----------------------------
+# Environment Setup
+# -----------------------------
 
-# -----------------------------
-# Load Environment Variables
-# -----------------------------
 load_dotenv()
 
 API_KEY = os.getenv("FEATHERLESS_API_KEY")
 BASE_URL = os.getenv("FEATHERLESS_BASE_URL")
+MODEL_NAME = os.getenv("LLM_MODEL", "deepseek-ai/DeepSeek-V3.2")
 
 if not API_KEY or not BASE_URL:
-    print("WARNING: Featherless API key or base URL not loaded.")
+    raise ValueError("Missing FEATHERLESS_API_KEY or FEATHERLESS_BASE_URL")
 
 client = OpenAI(
     api_key=API_KEY,
     base_url=BASE_URL,
+    timeout=30.0,
 )
 
-MODEL_NAME = "deepseek-ai/DeepSeek-V3.2"
+# -----------------------------
+# JSON Cleaning Utilities
+# -----------------------------
 
+def _extract_json_block(text: str) -> str:
+    """Extract JSON block from model output safely."""
+    if not text:
+        return ""
 
-def _safe_json_parse(content: str, empty_key: str) -> Dict[str, Any]:
-    """Attempt to parse JSON, falling back to an empty structure."""
-    content = content.strip()
+    # Remove markdown code blocks
+    if "```" in text:
+        match = re.search(r"```(?:json)?\s*([\s\S]*?)```", text)
+        if match:
+            text = match.group(1).strip()
 
-    if not content:
-        return {empty_key: []}
+    # Extract first valid JSON object
+    start = text.find("{")
+    end = text.rfind("}") + 1
+    if start >= 0 and end > start:
+        return text[start:end]
 
-    try:
-        return json.loads(content)
-    except Exception:
-        start = content.find("{")
-        end = content.rfind("}") + 1
-        if start != -1 and end != -1:
-            try:
-                return json.loads(content[start:end])
-            except Exception:
-                pass
+    return ""
 
-    print(f"{empty_key.capitalize()} JSON parsing failed.")
-    return {empty_key: []}
-
-
-# =====================================================
-# 1️⃣ TASK EXTRACTION FUNCTION
-# =====================================================
+# -----------------------------
+# Main LLM Function (Single Call)
+# -----------------------------
 
 def extract_tasks_with_llm(transcript: str) -> Dict[str, List[Dict[str, Any]]]:
-    if not API_KEY or not BASE_URL:
-        print("LLM TASK CALL SKIPPED: Featherless API configuration missing.")
+    """
+    Extract tasks + explanation in ONE LLM call.
+    Returns:
+    {
+        "tasks": [
+            {
+                "title": "...",
+                "severity": "...",
+                "urgency": true,
+                "explanation": "..."
+            }
+        ]
+    }
+    """
+
+    if not transcript.strip():
         return {"tasks": []}
 
     system_prompt = """
-    You are an Agile AI assistant.
+You are an Agile project assistant.
 
-    Extract actionable software development tasks from the transcript.
+From the transcript:
+1. Extract actionable software development tasks.
+2. For each task provide:
+   - title (short sentence)
+   - severity (Low, Medium, High, Critical)
+   - urgency (true or false)
+   - explanation (max 80 words, professional tone, explain priority + approach)
 
-    For each task return:
-    - title (short actionable sentence)
-    - severity (Low / Medium / High / Critical)
-    - urgency (true / false)
+Return ONLY valid JSON:
 
-    Return ONLY valid JSON in this format:
-
+{
+  "tasks": [
     {
-      "tasks": [
-        {
-          "title": "...",
-          "severity": "...",
-          "urgency": true
-        }
-      ]
+      "title": "...",
+      "severity": "High",
+      "urgency": true,
+      "explanation": "..."
     }
-    """
+  ]
+}
 
-    try:
-        response = client.chat.completions.create(
-            model=MODEL_NAME,
-            temperature=0,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": transcript},
-            ],
-        )
+No markdown.
+No extra text.
+No commentary.
+Only JSON.
+"""
 
-        content = (response.choices[0].message.content or "").strip()
-        print("\n===== LLM TASK RAW OUTPUT =====")
-        print(content)
-        print("================================\n")
+    max_retries = 3
+    delay = 2
 
-        return _safe_json_parse(content, empty_key="tasks")
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL_NAME,
+                temperature=0,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": transcript},
+                ],
+            )
 
-    except Exception as e:
-        print("LLM TASK CALL FAILED:", str(e))
-        return {"tasks": []}
+            content = (response.choices[0].message.content or "").strip()
 
+            print("\n===== LLM RAW OUTPUT =====")
+            print(content[:800])
+            print("===========================\n")
 
-# =====================================================
-# 2️⃣ EXPLANATION GENERATION FUNCTION
-# =====================================================
+            cleaned = _extract_json_block(content)
 
-def generate_explanations(tickets: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
-    if not API_KEY or not BASE_URL:
-        print("LLM EXPLANATION CALL SKIPPED: Featherless API configuration missing.")
-        return {"explanations": []}
+            data = json.loads(cleaned)
 
-    explanation_prompt = """
-    You are an Agile AI assistant.
+            if isinstance(data, dict) and "tasks" in data:
+                return {"tasks": data["tasks"]}
 
-    For each ticket below, provide a short explanation (maximum 100 words)
-    describing why it received its category and priority and tell how to approach it.
+            return {"tasks": []}
 
-    Keep explanations concise and professional and make it sound like a human wrote it.
+        except Exception as e:
+            print(f"LLM CALL FAILED (Attempt {attempt+1}):", e)
+            time.sleep(delay)
+            delay *= 2  # exponential backoff
 
-    Return ONLY valid JSON in this format:
-
-    {
-      "explanations": [
-        {
-          "title": "...",
-          "explanation": "..."
-        }
-      ]
-    }
-    """
-
-    try:
-        response = client.chat.completions.create(
-            model=MODEL_NAME,
-            temperature=0,
-            messages=[
-                {"role": "system", "content": explanation_prompt},
-                {"role": "user", "content": json.dumps(tickets)},
-            ],
-        )
-
-        content = (response.choices[0].message.content or "").strip()
-        print("\n===== LLM EXPLANATION RAW OUTPUT =====")
-        print(content)
-        print("=======================================\n")
-
-        return _safe_json_parse(content, empty_key="explanations")
-
-    except Exception as e:
-        print("LLM EXPLANATION CALL FAILED:", str(e))
-        return {"explanations": []}
+    # Final fallback
+    return {"tasks": []}
